@@ -1,0 +1,74 @@
+---
+layout: post
+title: "Real Time HTML5 application with Websocket and ActiveMQ/camel"
+date: 2012-04-26
+comments: false
+categories:
+- Apache Camel
+- HTML5
+- ActiveMQ
+- WebSocket
+---
+
+<div class='post'>
+    As part of my
+    <a href="http://fusesource.com/apache-camel-conference-2012/" target="_blank">CamelOne</a> presentation, I have prepared some examples to dig into what Apache
+    <a href="http://activemq.apache.org/" target="_blank">ActiveMQ</a> and
+    <a href="http://camel.apache.org/" target="_blank">Camel</a> propose to work with
+    <a href="http://www.html5rocks.com/en/" target="_blank">HTML5</a> and
+    <a href="http://www.websocket.org/" target="_blank">WebSocket </a>technology.<br/>Developing "Real Time Web Applications" has always been&nbsp;painful&nbsp;not matter if the technology used was based on Java Applet, Adobe Flash, Adobe ShockWave, Microsoft Silverlight and the protocol (HTTP, RMI, ...).<br/><br/>Since HTML5 publication (2009) and the work done by W3C and IETF organisations, we now have a standard
+    <a href="http://datatracker.ietf.org/doc/rfc6455/" target="_blank">rfc-6455 </a>that we can use to exchange in a bi-directional way "messages" between the browser and the Web Server. Only one HTTP(s) request is required to initiate the WebSocket communication and later on the exchange of data frames (text or bytes).<br/><br/>ActiveMQ (release 5.6) like Camel (release 2.10) proposes a WebSocket Transport Connector or Endpoint using Jetty WebServer WebSocket implementation (v7.5). This allow not only to retrieve data from topics but when combining the EIP patterns of Camel and some components like : sql, jpa, file, rss, atom, twitter, ... we can "aggregate", "enrich" or "filter" content receive from feed providers before to publish them for feed consumers.<br/><br/>ActiveMQ uses Stomp as a wired format to send WebSockets messages between the WebSocket server running within the ActiveMQ broker and the Web browser. In this context, we must use one of the two javascript librairies available (<a href="http://www.jmesnil.net/stomp-websocket/doc/">stomp.js</a>,
+    <a href="https://github.com/krukow/stomple">stomple</a>) to develop the project <br/><br/>
+    <pre class="brush:jscript" name="stompo-js-script">    $(document).ready(function() {<br/>       var client, destinationQuotes;<br/>        $('#connect_form').submit(function() {<br/>            var url = $("#connect_url").val();<br/>            client = Stomp.client(url);<br/><br/>            // the client is notified when it is connected to the server.<br/>            var onconnect = function(frame) {<br/><br/>                var stockTable = document.getElementById("stockTable");<br/>                var stockRowIndexes = {};<br/><br/>                client.subscribe(destinationQuotes, function(message) {<br/>                    var quote = JSON.parse(message.body);<br/>                    $('.' + "stock-" + quote.symbol).replaceWith("" +<br/>                        "" + quote.symbol + "" +<br/>                        "" + quote.open.toFixed(2) + "" +<br/>                        "" + quote.last.toFixed(2) + "" +<br/>                        "" + quote.change.toFixed(2) + "" +<br/>                        "" + quote.high.toFixed(2) + "" +<br/>                        "" + quote.low.toFixed(2) + "" +<br/>                        "");<br/>        ...<br/><br/>        client.connect(login, passcode, onconnect);<br/></pre>
+    <br/>and of course the WebSocket protocol must be enable.<br/><br/>
+    <pre class="brush:xml" name="websocket-transport">  <transportconnectors><br/>
+        <transportconnector name="websocket" uri="ws://0.0.0.0:61614"><br/></transportconnector>
+    </transportconnectors><br/></pre>
+    Camel does not need a special format to exchange the data between its WebSocket endpoint and the browser as JSon text will be send through the WebSocket Data Frames to the browser. We must just expose a Camel Route as a WebSocket Server.
+    <br/><br/>
+    <pre class="brush:java" name="camel-websocket-route">public class WebSocketStockPricesRoute extends RouteBuilder {<br/>    @Override<br/>    public void configure() throws Exception {<br/><br/>           from("activemq:topic:stockQuoteTopic")<br/>             .log(LoggingLevel.DEBUG,"&gt;&gt; Stock price received : ${body}")<br/>             .to("websocket:stockQuoteTopic?sendToAll=true");<br/><br/>    }<br/>} <br/></pre>
+    <br/>and use in the browser the WebSocket HTML5 js script.<br/><br/>
+    <pre class="brush:jscript" name="camel-javascript">    var socket;<br/>    $('#connect_form').submit(function () {<br/><br/>        var stockTable = document.getElementById("stockTable");<br/>        var stockRowIndexes = {};<br/>        var host = $("#connect_url").val();<br/>        socket = new WebSocket(host);<br/><br/>       // Add a connect listener<br/>        socket.onopen = function () {<br/>            $('#msg').append('<div class="event">
+        <br/>Socket Status: ' + socket.readyState + ' (open)
+    </div><br/>');<br/>        }<br/><br/>        socket.onmessage = function (msg) {<br/>            // $('#msg').append('<div class="message">
+        <br/>Received: ' + msg.data + "
+    </div><br/>");<br/><br/>            var quote = JSON.parse(msg.data);<br/><br/>        ....<br/></pre>
+    <br/>In both cases, you can combine other javascript librairies (jquery, jquery-ui) to improve the design of the JSon objects to be displayed in the browser.<br/><br/>Here are some screenshots about the demos<br/><br/>
+
+    <div class="separator" style="clear: both; text-align: center;">
+        <a href="{{site.url}}/assets/images//activemq-stocks.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="200" src="{{site.url}}/assets/images//activemq-stocks.png" width="146"/></a>
+    </div>
+    Stock Trader<br/>
+
+    <div class="separator" style="clear: both; text-align: center;">
+        <a href={{site.url}}/assets/images/chat-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="118" src="{{site.url}}/assets/images/chat-camel.png" width="200"/></a>
+    </div>
+    Chat Room<br/><br/><br/><br/><br/><br/><br/><br/><a href="{{site.url}}/assets/images//news-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="163" src="{{site.url}}/assets/images/news-camel.png" width="200"/></a><br/>Twitter and News Feed<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Code can be retrieved from
+    <a href="https://github.com/FuseByExample/">FuseByExample</a>&nbsp;web site. Look to "<a href="https://github.com/FuseByExample/websocket-activemq-camel" target="_blank">websocket-activemq-camel</a>" git hub project.<br/><br/>Enjoy WebSocket with Apache Camel and ActiveMQ.
+</div>
+<h2>Comments</h2>
+<div class='comments'>
+    <div class='comment'>
+        <div class='author'>Tallahassee</div>
+        <div class='content'>
+            thank you very much with sharing this technique. I really appreciate it! </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            I will have a look to solve this issue as until no I have no idea from where this message comes from.</div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Charlie</div>
+        <div class='content'>
+            Hi Charles,<br/><br/>Nice work, Camel Websocket&#39;s good!<br/><br/>I&#39;ve just one question: why:<br/><b><br/>from(&quot;jms:queue:subscriptionValidationError&quot;).log(&quot;Receiving error message: ${body} ${in.headers.websocket.connectionKey}&quot;)<br/> .setHeader(WebsocketConstants.CONNECTION_KEY, constant(&quot;TOTO&quot;))<br/> .log(&quot;Sending error message: ${body} ${out.headers.websocket.connectionKey}&quot;)<br/> .to(&quot;websocket://0.0.0.0:9292/subscribeErrors?staticResources=classpath:webapp&quot;);<br/></b><br/>Give me the log without connectionKey?<br/><i><br/>Receiving error message: doit suivre &quot;[-a-zA-Z0-9]+\@[-a-zA-Z0-9]+\.[a-zA-Z]+&quot; 60f7cc44-9d9b-4bde-905a-d7d51be7661a
+            <br/>Sending error message: doit suivre &quot;[-a-zA-Z0-9]+\@[-a-zA-Z0-9]+\.[a-zA-Z]+&quot;
+            <br/></i><br/><br/>Is it normal?<br/><br/>Have you got an idea on how to get rid of this?<br/><br/>Regards
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Rob Davies</div>
+        <div class='content'>
+            That&#39;s awesome Charles! - looking forward to seeing it at CamelOne!</div>
+    </div>
+</div>

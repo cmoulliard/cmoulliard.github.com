@@ -1,0 +1,109 @@
+---
+layout: post
+title: "Run Camel route on ServiceMix 3.3.x"
+date: 2010-03-30
+comments: false
+---
+
+<div class='post'>
+    Even if Apache ServiceMix (ESB) was mainly designed as a JBI container, it is perfectly possible to use camel routes and camel components (bindy, file, jms, ...) on this platform.
+    <br/><br/>This allows by example to :<br/>- Combine JBI binding components or Services with Camel routes,<br/>- Use a camel component when the binding component does not exist,<br/>- Deploy camel as Service Unit in Service Assembly<br/><br/>Here is a small example showing that in action. The creation of the project is very simple as you have to create a Service Unit. If you work with maven, you can use the servicemix plugin which will allow to create the maven project. Otherwise, you can create the maven structure manually.<br/><br/>To be able to deploy camel next, you must create a Service Assembly (= SA) who will include the Service Unit.<br/><br/>Don't be afraid and follow the tutorial described here for that part of the work : http://servicemix.apache.org/2-beginner-using-maven-to-develop-jbi-applications.html
+    <br/><br/>When the project is ready, you create a camel-context.xml file in the directory src/main/resources. This file which is a spring xml file will contain the camel routes + beans definitions or will point to your packages if you prefer to code your routes using Camel Java DSL language instead of Spring DSL language.<br/><br/>Remark : in my example, I use Spring DSL language.<br/><br/>The route is very basic and will create a message containing the text "Hello World from SMX3!" as body value. The message is copied in an activemq queue called "in". A second route take the messages and send it to the log. The log message is readable from the console where ServiceMix 3.3.x has been started.<br/><br/>In the Spring file, you must add the camel bean "org.apache.camel.component.jms.JmsComponent" definition to instantiate a connection factory to the queueing engine. The broker is created and started at the launch of ServiceMix3 so you don't need to do anything else here !<br/><br/>
+    <pre name="code" class="xml"><br/><beans xmlns="http://www.springframework.org/schema/beans"<br/>       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<br/>       xsi:schemaLocation="<br/>       http://www.springframework.org/schema/beans<br/>       http://www.springframework.org/schema/beans/spring-beans.xsd<br/>       http://camel.apache.org/schema/spring<br/>       http://camel.apache.org/schema/spring/camel-spring.xsd"><br/><br/>      <bean id="activemq" class="org.apache.camel.component.jms.JmsComponent">
+        <br/>
+        <property name="connectionFactory"><br/>
+            <bean class="org.apache.activemq.ActiveMQConnectionFactory"><br/>
+                <property name="brokerURL" value="tcp://localhost:61616"/>
+                <br/></bean>
+            <br/></property>
+        <br/></bean><br/><br/>   <camelContext xmlns="http://camel.apache.org/schema/spring"><br/>
+        <package>org.apache.servicemix.samples</package>
+        <br/> <br/>
+        <route><br/>
+            <from uri="timer:myTimerEvent?fixedRate=true&amp;period=15000"/>
+            <br/>
+            <setBody><br/>
+                <constant>Hello World from SMX3 !</constant>
+                <br/></setBody>
+            <br/>
+            <to uri="activemq:queue:in"/>
+            <br/></route>
+        <br/> <br/>
+        <route><br/>
+            <from uri="activemq:queue:in"/>
+            <br/>
+            <to uri="log:org.apache.servicemix.samples.camel.ExampleCamelRoute"/>
+            <br/></route>
+        <br/></camelContext><br/><br/></beans><br/></pre>
+    <br/><br/>To allow Camel to work with its jms component, the following dependency must be added in the pom of the camel-su.
+    <br/><br/>
+    <pre name="code" class="xml"><br/><br/>  <dependencies><br/>
+        <dependency><br/>
+            <groupId>org.apache.camel</groupId>
+            <br/>
+            <artifactId>camel-core</artifactId>
+            <br/>
+            <version>2.2.0</version>
+            <br/></dependency>
+        <br/>
+        <dependency><br/>
+            <groupId>org.apache.camel</groupId>
+            <br/>
+            <artifactId>camel-spring</artifactId>
+            <br/>
+            <version>2.2.0</version>
+            <br/></dependency>
+        <br/>
+        <dependency><br/>
+            <groupId>org.apache.camel</groupId>
+            <br/>
+            <artifactId>camel-jms</artifactId>
+            <br/>
+            <version>2.2.0</version>
+            <br/></dependency>
+        <br/></dependencies><br/><br/></pre>
+    <br/><br/><br/>To compile the project, simply launch the command "mvn install" to generate the SU and do the same for the SA. When the Service Assembly jar file is available, copy it in the hotdeploy directory of ServiceMix 3 server and check the log.<br/><br/>This example which is very basic can be extended with another camel components. In that case, don't forget to add their dependency in the SU pom as the camel lib must be added in the lib directory of the SU.<br/><br/>Have fun with that !
+</div>
+<h2>Comments</h2>
+<div class='comments'>
+    <div class='comment'>
+        <div class='author'>Android app development</div>
+        <div class='content'>
+            This is one of the good Article.This is one of the great post.I like your blog features.<br/><a href="http://www.android-app-development.com" rel="nofollow">Android app developers</a>
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            Hi Jean-Marc,<br/><br/>As mentioned in the post (see your link), the solution to this problem is to expose the javax.xml packages by removing the comment in front of the lines in the system.properties file of SMX4.<br/><br/>Remark : My post was focused on SMX3 !!<br/><br/>Kind regards,<br/><br/>Charles
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Jean-Marc</div>
+        <div class='content'>
+            Hi Charles,<br/><br/>I&#39;m using smx 4 and Camel 2.2 and I would like to deploy the Camel Web console on karaf 1.2<br/><br/>I have the same problems like you :<br/>http://www.mail-archive.com/users@camel.apache.org/msg05416.html<br/><br/>Do you have found a solution for this last issue ?<br/><br/>Thanks in advance<br/><br/>JMH
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>R110926oseH</div>
+        <div class='content'>
+            thank you for you to make me learn more,thank you∩０∩
+            <a href="http://www.twsexy777.info" rel="nofollow">.</a><a href="http://www.twavhi.info" rel="nofollow">.</a><a href="http://www.twavgood.info" rel="nofollow">.</a><a href="http://www.twavdx.info" rel="nofollow">.</a><a href="http://www.hiasia258.info" rel="nofollow">.</a><a href="http://www.free777.info" rel="nofollow">.</a><a href="http://www.888show.info" rel="nofollow">.</a><a href="http://www.sexy758.com" rel="nofollow">.</a><a href="http://www.roomhi.com" rel="nofollow">.</a><a href="http://www.room999.com" rel="nofollow">.</a><a href="http://www.room5366.com" rel="nofollow">.</a><a href="http://www.room5320.com" rel="nofollow">.</a><a href="http://www.room520.com" rel="nofollow">.</a><a href="http://www.room1007.com" rel="nofollow">.</a><a href="http://www.room080.com" rel="nofollow">.</a><a href="http://www.room0401.com" rel="nofollow">.</a><a href="http://www.room0204.com" rel="nofollow">.</a><a href="http://www.girlut.com" rel="nofollow">.</a><a href="http://www.girlmeimei.com" rel="nofollow">.</a><a href="http://www.girlav.com" rel="nofollow">.</a><a href="http://www.twavchat.info" rel="nofollow">.</a><a href="http://www.twavchannel.info" rel="nofollow">.</a><a href="http://www.twav616.info" rel="nofollow">.</a><a href="http://www.twav555.info" rel="nofollow">.</a><a href="http://www.twav0401.info" rel="nofollow">.</a><a href="http://www.twav0204.info" rel="nofollow">.</a><a href="http://www.lovemeimei.info" rel="nofollow">.</a><a href="http://www.lovelive.info" rel="nofollow">.</a><a href="http://www.jpchatgirl.info" rel="nofollow">.</a><a href="http://www.jpchatchat.info" rel="nofollow">.</a><a href="http://www.himoviejp.info" rel="nofollow">.</a><a href="http://www.himoviegood.info" rel="nofollow">.</a><a href="http://www.himovie69.info" rel="nofollow">.</a><a href="http://www.himovie66.info" rel="nofollow">.</a><a href="http://www.himovie173.info" rel="nofollow">.</a><a href="http://www.himovie104.info" rel="nofollow">.</a><a href="http://www.higo2top.info" rel="nofollow">.</a><a href="http://www.higo2talk.info" rel="nofollow">.</a><a href="http://www.higo2meme.info" rel="nofollow">.</a><a href="http://www.higo2meimei.info" rel="nofollow">.</a>
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Architecture-Seenu</div>
+        <div class='content'>
+            Thanks, appreciate it.</div>
+    </div>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            I use simply a javascript syntax highlighter --&gt; http://code.google.com/p/syntaxhighlighter/</div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Architecture-Seenu</div>
+        <div class='content'>
+            Hi great post,  I looked at servicemix 3 and 4. I settled on Fuse Esb mainly because of osgi (sm4). I have a question not related to the post, if you don&#39;t mind.  What do you use to format code, I have been looking for something like that for my blog.  Thanks in advance.</div>
+    </div>
+</div>

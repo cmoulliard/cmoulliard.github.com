@@ -1,0 +1,114 @@
+---
+layout: post
+title: "Secure Web Services - WS-Security"
+date: 2010-09-24
+comments: false
+---
+
+<div class='post'>
+    Security is one of the important key in the success of a IT project but most of the time only user authentication or data encryption are taken into account. So security of the application is often not adressed or leave aside due to complexity of the implementation.<br/>One of the reason explaining this situation comes from the fact that solutions or frameworks proposed to secure an application are difficult to configure and maintain. And this remark prevalls over the specification WS-Security.<br/><br/>In large company having deployed WS-Services to allow intra or inter connection between applications, Web application authentication with HTTPS protocol mechanisms are use to secure platforms. That means that users discovering the credentials used to connect to the web server can potentially have access to the services of the company.<br/><br/>WS-Security offers a way to authenticate the user connected to a web service or allow also a user to be trusted on the web server it is connected. This mechanism is interesting because it reinforce the security but provides also a way to restrict access to unauthorized users to web services.<br/><br/>Apache Camel and CXF frameworks offers a simplify way to implement this with only few lines of code and spring beans definition. Let's see that in action :<br/><br/>STEP 1<br/><br/>We only need to use JAAS api to authenticate the user using the following java package "javax.security.auth.callback" and the project
+    <a href="http://ws.apache.org/wss4j/">WS4J</a> of Apache. Here is a simple example authenticate a user using a list and the password provided.<br/><br/>
+    <pre name="code" class="html"><br/>package org.apache.camel.example.reportincident;<br/><br/>import java.io.IOException;<br/>import java.util.HashMap;<br/>import java.util.Map;<br/><br/>import javax.security.auth.callback.Callback;<br/>import javax.security.auth.callback.CallbackHandler;<br/>import javax.security.auth.callback.UnsupportedCallbackException;<br/><br/>import org.apache.ws.security.WSPasswordCallback;<br/><br/>/**<br/>* Callback handler to handle passwords<br/>*/<br/>public class UTPasswordCallback implements CallbackHandler {<br/><br/>  private Map<string, string=""> passwords = new HashMap<string, string="">();<br/><br/>  public UTPasswordCallback() {<br/>      passwords.put("claus", "sualc");<br/>      passwords.put("charles", "selrahc");<br/>      passwords.put("james", "semaj");<br/>      passwords.put("abcd", "dcba");<br/>  }<br/><br/>  /**<br/>   * Here, we attempt to get the password from the private alias/passwords map.<br/>   */<br/>  public void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException {<br/><br/>      String user = "";<br/><br/>      for (int i = 0; i < pc =" (WSPasswordCallback)" user =" pc.getIdentifier();" pass =" passwords.get(user);" string=""><string, string=""><br/></pre>
+    <br/><br/>STEP 2 This is here that the magic will operates as we will use Spring beans definition with Apache Web Services Framework -
+    <a href="http://cxf.apache.org/">CXF</a> and Apache
+    <a href="http://camel.apache.org/cxf.html">Camel</a> to expose the web service<br/><br/>Instantiate your WS4J bean<br/><br/>
+    <pre name="code" class="xml"><br/><bean id="wss4jInInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+        <br/>
+        <constructor-arg></constructor-arg>
+    </bean>    <bean id="wss4jInInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor"><br/>
+        <constructor-arg><br/>
+            <map><br/>
+                <entry key="action" value="UsernameToken Timestamp"><br/>
+                    <entry key="passwordType" value="PasswordDigest"><br/>
+                        <entry key="passwordCallbackClass" value="org.apache.camel.example.reportincident.UTPasswordCallback">
+                            <br/></entry>
+                    </entry>
+                </entry>
+            </map>
+            <br/></constructor-arg>
+        <br/></bean><br/></pre>
+    <br/><br/>Add it as an interceptor to CXF to allow CXF to authenticate the user using the credentials provided in the SOAP header definition.<br/><br/>
+    <pre name="code" class="xml"><br/>  <cxf:cxfendpoint id="reportIncident" address="http://localhost:9080/camel-example-reportincident/webservices/incident" wsdlurl="etc/report_incident.wsdl" serviceclass="org.apache.camel.example.reportincident.ReportIncidentEndpoint">
+        <br/><br/>
+        <cxf:ininterceptors><br/>
+            <ref bean="loggingInInterceptor"><br/>
+                <ref bean="wss4jInInterceptor"><br/></ref>
+                <br/><br/>
+                <cxf:outinterceptors><br/>
+                    <ref bean="loggingOutInterceptor"><br/> <!--  <ref bean="wss4jOutInterceptor"> --><br/></ref>
+                    <br/><br/></cxf:outinterceptors>
+                <br/>
+                <cxf:cxfendpoint id="reportIncident" address="http://localhost:9080/camel-example-reportincident/webservices/incident" wsdlurl="etc/report_incident.wsdl" serviceclass="org.apache.camel.example.reportincident.ReportIncidentEndpoint">
+                    <cxf:ininterceptors><br/></pre>
+    <br/><br/><br/>Here is an example of the SOAP header<br/><br/>
+    <pre name="code" class="xml"><br/><soap:envelope soap="http://schemas.xmlsoap.org/soap/envelope/"><br/>
+        <soap:header><br/>
+            <wsse:security wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" mustunderstand="1">
+                <br/>
+                <wsu:timestamp wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" id="Timestamp-2">
+                    <br/>
+                    <wsu:created>2010-09-24T07:31:06.308Z</wsu:created>
+                    <br/>
+                    <wsu:expires>2010-09-24T07:36:06.308Z</wsu:expires>
+                    <br/></wsu:timestamp>
+                <br/>
+                <wsse:usernametoken wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" id="UsernameToken-1">
+                    <br/>
+                    <wsse:username>charles</wsse:username>
+                    <br/>
+                    <wsse:password type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">KoNvkEh9jwgvxTfcTza6+kHkKNI=</wsse:password>
+                    <br/>
+                    <wsse:nonce encodingtype="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">havIKNKvlRuatlp3CncMKw==</wsse:nonce>
+                    <br/>
+                    <wsu:created>2010-09-24T07:31:06.306Z</wsu:created>
+                    <br/></wsse:usernametoken>
+                <br/></wsse:security>
+            <br/></soap:header>
+        <br/>
+        <soap:body><br/>
+            <ns2:inputreportincident ns2="http://reportincident.example.camel.apache.org"><br/>
+                <incidentid>222</incidentid>
+                <br/>
+                <incidentdate>2010-07-14</incidentdate>
+                <br/>
+                <givenname>Charles</givenname>
+                <br/>
+                <familyname>Moulliard</familyname>
+                <br/>
+                <summary>Bla</summary>
+                <br/>
+                <details>Bla bla</details>
+                <br/>
+                <email>cmoulliard@apache.org</email>
+                <br/>
+                <phone>0011 22 33 44</phone>
+                <br/></ns2:inputreportincident>
+            <br/></soap:body>
+        <br/></soap:envelope><br/></pre>
+    <br/><br/>And finally, declare your camel route using the web services<br/><br/>
+    <pre name="code" class="xml"><br/><camel:camelcontext id="camel"><br/>
+        <camel:route>
+            <camel:from uri="cxf:bean:reportIncident">
+                <camel:convertbodyto type="org.apache.camel.example.reportincident.InputReportIncident">
+                    <camel:setheader headername="CamelFileName">
+                        <camel:to uri="velocity:etc/MailBody.vm">
+                            <camel:to uri="file://target/subfolder">
+                                <camel:camelcontext id="camel"><br/>
+                                    <camel:route><br/>
+                                        <camel:from uri="cxf:bean:reportIncident"><br/>
+                                            <camel:convertbodyto type="org.apache.camel.example.reportincident.InputReportIncident">
+                                                <br/>
+                                                <camel:setheader headername="CamelFileName"><br/>
+                                                    <camel:method bean="filenameGenerator" method="generateFilename">
+                                                        <br/></camel:method>
+                                                    <br/>
+                                                    <camel:to uri="velocity:etc/MailBody.vm"><br/>
+                                                        <camel:to uri="file://target/subfolder"><br/>
+                                                            <camel:transform><br/>
+                                                                <camel:method bean="myBean" method="getOK"><br/>
+                                                                </camel:method>
+                                                                <br/></camel:transform>
+                                                            <br/></pre>
+    <br/><br/>To play with the example, follow this
+    <a href="https://svn.apache.org/repos/asf/camel/trunk/examples/camel-example-reportincident-ws-security-osgi/">example of Camel CXF</a> and enjoy it !
+</div>

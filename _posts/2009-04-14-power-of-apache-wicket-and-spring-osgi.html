@@ -1,0 +1,57 @@
+---
+layout: post
+title: "The power of Apache wicket and Spring OSGI Service top of ServiceMix 4"
+date: 2009-04-14
+comments: false
+---
+
+<div class='post'>
+    In a previous post, I have explained how you can transform ServiceMix 4 as a Web Application Server. In this new post, I will show you How you can combine the power of Apache Wicket and Spring OSGI services together on ServiceMix 4 with the help of PAX Web.<br/><br/>This mix can be achieved very easily. Only a few steps are required.<br/><br/>1) Create a maven project where you will design your spring service and expose it as an OSGI service according to the
+    <a href="http://static.springframework.org/osgi/docs/1.2.0/reference/html-single/#service-registry:export">Spring documentation</a>.<br/><br/>
+    <pre name="code" class="xml"><br/><osgi:service ref="incidentService" interface="org.apache.camel.example.reportincident.service.IncidentService">
+        <br/></osgi:service><br/></pre>
+    <br/><br/>2) Create a new maven project that you will use to package your Apache web application. The trick here is to modify your web.xml file like this :<br/><br/>a) add listener and context parameter for the Spring OSGI Context Loader<br/><br/><textarea name="code" class="xml" cols="20" rows="4"><br/>
+    <context-param><br/>
+        <param-name>contextClass</param-name>
+        <br/>
+        <param-value><br/>org.springframework.osgi.web.context.support.OsgiBundleXmlWebApplicationContext<br/>
+        </param-value>
+        <br/></context-param>
+    <br/><br/>
+    <listener><br/>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        <br/></listener>
+    <br/></textarea><br/><br/>b) Add Spring Factory to Apache (required to allow injection of dependency in java classes of Wicket)<br/><br/><textarea name="code" class="xml" cols="20" rows="4"><br/>
+    <filter><br/>
+        <filter-name>camel.example.reportincident.web</filter-name>
+        <br/>
+        <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+        <br/>
+        <init-param><br/>
+            <param-name>applicationClassName</param-name>
+            <br/>
+            <param-value>org.apache.camel.example.reportincident.WicketApplication</param-value>
+            <br/>
+            <param-name>applicationFactoryClassName</param-name>
+            <br/>
+            <param-value>org.apache.wicket.spring.SpringWebApplicationFactory</param-value>
+            <br/></init-param>
+        <br/></filter>
+    <br/></textarea><br/><br/>Please refer to the
+    <a href="http://cwiki.apache.org/WICKET/spring.html">Apache Wicket Web</a> site for more info about Spring integration<br/><br/>3) create an applicationContext.xml file under WEB-INF folder containing the reference to the OSGI service :<br/><br/><span style="font-weight: bold;">&lt;osgi:reference id="incidentService" interface="org.apache.camel.example.reportincident.service.IncidentService"/&gt;</span><br/><br/>4) And of course, in your Wicket page, inject dependency using the Wicket annotation :<br/><br/><span style="font-weight: bold;">@SpringBean</span><br/><span style="font-weight: bold;">    private IncidentService incidentService;</span><br/><br/>5) Now generate the bundles (JAR/WAR) and deploy them top of SMX4. Before to deploy the war containing the web project, verify that the following bundles are deployed on SMX4 :<br/><br/>- OPS4J Pax Web - Web Container (0.6.0)<br/>- OPS4J Pax Web - Jsp Support (0.6.0)<br/>- OPS4J Pax Web Extender - WAR (0.5.1)<br/>- OPS4J Pax Web Extender - Whiteboard (0.5.1)<br/>- OPS4J Pax Url - war:, war-i: (0.4.0)<br/><br/>- spring-osgi-web (1.2.0.rc1)<br/>- Wicket (1.3.5)<br/>- Wicket IoC common code (1.3.5)<br/>- Wicket Spring Integration (1.3.5)<br/>- Wicket Spring Integration through Annotations (1.3.5)<br/>- Wicket Extensions (1.3.5)<br/><br/>- Apache ServiceMix Bundles: jetty-6.1.14 (6.1.14.1)<br/><br/>A tutorial will be published soon with material and step by step.<br/><br/>Remarks :<br/>- PAX-runner can be used as running environment (instead of Servicemix) with Equinox, Felix, ...<br/>- Many thanks to Alin Dreghiciu (PAX project) for its help/support
+</div>
+<h2>Comments</h2>
+<div class='comments'>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            Hi anderson,<br/><br/>Interesting question that you ask me.<br/><br/>Camel-http and Camel-jetty components have been designed to run in a non-OSGI environment. They can be deployed as bundles but testing must be performed to be sure that they work perfectly top of OSGI servers.
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Anderson Nielson</div>
+        <div class='content'>
+            Will other bundles, for instance, using camel-jetty, going to work?<br/><br/>Is it possible to have my camel-jetty powered webservices running in the same jetty server port inside the same servicemix but deployed in different bundles?
+        </div>
+    </div>
+</div>

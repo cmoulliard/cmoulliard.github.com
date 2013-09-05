@@ -1,0 +1,74 @@
+---
+layout: post
+title: "ServiceMix 4 as a Web Application Server"
+date: 2009-03-27
+comments: false
+categories:
+- SMX4
+- Web Application Server
+- ServiceMix
+---
+
+<div class='post'>
+    This week, I have discovered the web possibilities offered by the ServiceMix 4 platform. SMX ("pour les intimes") uses as its core platform the excellent packages of the project
+    <a href="http://wiki.ops4j.org/display/ops4j/Pax">PAX </a>which is the umbrella project for all OSGi bundles and tools.<br/><br/>In standard, the following bundles are installed :<br/><br/>[ 9] [Active ] [ ] [ 8] OPS4J Pax Logging - API (1.3.0)<br/>[ 10] [Active ] [ ] [ 8] OPS4J Pax Logging - Service (1.3.0)<br/>[ 11] [Active ] [ ] [ 5] OPS4J Pax Url - wrap: (0.3.3)<br/>[ 12] [Active ] [ ] [ 5] OPS4J Pax Url - mvn: (0.3.3)<br/><br/>They are used to log information of the server and to install or wrap bundles. Nevertheless, PAX project is not limited to the mentioned bundles but proposes also Web support for jetty.<br/><br/>To install or transform ServiceMix as a Web Application Server, you can use the "web" and "web-core" feature (available under ServiceMix 4) or install the following bundles manually :<br/><br/>- OPS4J Pax Web - Web Container (0.5.2)<br/>- OPS4J Pax Web - Jsp Support (0.5.2)<br/>- OPS4J Pax Web Extender - WAR (0.5.0)<br/>- OPS4J Pax Web Extender - Whiteboard (0.5.0)<br/>- OPS4J Pax Url - war:, war-i: (0.3.3)<br/>- Apache ServiceMix Bundles: jetty-6.1.14 (6.1.14.1)<br/><br/>The Web Application Server becomes available at the url http://localhost:8080.<br/><br/>Evidently, no jsp pages, servlets are available. Don't worry, to deploy a WAR, you only have to copy it to the deploy directory of ServiceMix and it will convert be converted as a bundle<br/><br/>By example, you can install a simple Hello World war using the command<br/><br/>install war:file:///d:/temp/sample.war?Webapp-Context=sample<br/><br/>remarks :<br/>- file:/// must be changed according to the location of your war<br/>- The parameter WebApp-Context is added to have a nicer web address<br/><br/>and see the result at the address : http://localhost:8080/sample/index.html<br/><br/><img src="file:///C:/DOCUME%7E1/CHARLE%7E1.STR/LOCALS%7E1/Temp/moz-screenshot.png" alt=""/><img src="file:///C:/DOCUME%7E1/CHARLE%7E1.STR/LOCALS%7E1/Temp/moz-screenshot-1.png" alt=""/>Yes, this looks beautiful but the web port number is 8080, my boss would like to secure the web site, change the session timeout, ....<br/><br/>This is very simple to do, you create a file named (<span style="font-weight: bold;">org.ops4j.pax.web.cfg</span>) and copy it in the directory
+    <span style="font-weight: bold;">etc </span>of servicemix, in this file you can parametrize by example the following properties (see
+    <a href="http://wiki.ops4j.org/display/ops4j/Pax+Web+-+Configuration">PAX</a> for more information) :<br/><br/><b>org.osgi.service.http.port=80<br/>org.ops4j.pax.web.session.timeout=10</b><br/><br/>You restart Servicemix and now the web site is available at the following address :<br/><br/>http://localhost/sample/index.html
+</div>
+<h2>Comments</h2>
+<div class='comments'>
+    <div class='comment'>
+        <div class='author'>william</div>
+        <div class='content'>
+            This comment has been removed by a blog administrator.</div>
+    </div>
+    <div class='comment'>
+        <div class='author'>led</div>
+        <div class='content'>
+            Charles,<BR/><BR/>I've posted in Alin's blog (http://adreghiciu.blogspot.com/2009/03/ops4j-pax-web-ahead-of-its-time.html) and he told to use pax web snapshot bundles. The released bundles at the moment don't support tag files.<BR/><BR/>thanks for your atention!
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>led</div>
+        <div class='content'>
+            Charles,<BR/>I did what you said in the previous post and im still having the problem;<BR/><BR/>Above is a part of osgi headers (MANIFEST) form my war deployed on the SMX 4.<BR/><BR/>Bundle-ClassPath = WEB-INF/classes,.,WEB-INF/tags/jms/*.tag,WEB-INF/tags/form/tooltip.tag,WEB-INF/tags/form/*.tag,<BR/><BR/>No even pointing to the specific .tag file , i get the problem solved<BR/><BR/>The exception is: "org.apache.jasper.JasperException: /topics.jsp(49,75) No tag "tooltip" defined in tag library imported with prefix "form".
+            <BR/><BR/>Did you tested your bnd customization solution with the activemq-web-console 5.2.0 ???<BR/><BR/>many thanks for your atention!<BR/>PS: im also questioning alin from OPS4J in his blog.
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            Led,<BR/><BR/>Here is what you have to do in order to solve your problem :<BR/><BR/>Create a file activemq-web-console.bnd and place it in c:/temp/ with the following content:<BR/><BR/>WAR-URL=file:///c:/temp/activemq-web-console-5.2.0.war<BR/>Bundle-Classpath=., WEB-INF/tags/form, WEB-INF/tags/jms<BR/>WebWebapp-Context=activemqweb<BR/><BR/>and then use on SMX4 the command:<BR/>install war-i:file:///c:/temp/activemq-web-console-5.2.0.bnd
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>led</div>
+        <div class='content'>
+            Nice charles! If pax jsp supports jsp 2.1 spec, i must missing something or the pax-web-jsp bundle :)<BR/><BR/>the pax web jsp wiki say that the taglib support do two things: 1)look for all tld files in any jar referenced by your Bundle-ClassPath manifest entry<BR/>1) look for all tld files in WEB-INF directory or sub-directory of WEB-INF in your bundle jar<BR/><BR/>maybe the pax web jsp put on the class path just .tld files and misses .tag files... im saying that because my tag files are in a WEB-INF sub folder, where as the wiki says, its a valid place to put .tld files.
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            Hi Led,<BR/><BR/>Many thanks for your greetings.<BR/><BR/>I haven't tested a deployment of project including tld files. I will test it. I'm almost sure that the MANIFEST file does not include/import the files and in consequence are not loaded by PAX Web JSP bundle<BR/><BR/>FYI : here is the list of what is exported by PAX Web JSP. As you can see JSP 2.1 is supported :<BR/><BR/>Export-Package = javax.servlet.jsp.tagext;uses:="javax.servlet.jsp";version="2.1.0",javax.servlet.jsp.el;uses:="javax.servlet.http,javax.servlet,javax.servlet.jsp,javax.e<BR/>l";version="2.1.0",javax.servlet.jsp.resources;version="2.1.0",javax.servlet.jsp;uses:="javax.servlet.http,javax.servlet,javax.servlet.jsp.tagext,javax.servlet.jsp.el,jav<BR/>ax.el";version="2.1.0",javax.el;version="2.1.0",org.ops4j.pax.web.jsp;uses:="javax.servlet,org.osgi.framework,org.apache.commons.logging";version="0.5.2"<BR/><BR/>Have you modified the MANIFEST file as explained in the documentation : http://wiki.ops4j.org/display/ops4j/Pax+Web+-+Jsp ?<BR/><BR/>Regards,<BR/><BR/>Charles
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>led</div>
+        <div class='content'>
+            Congratulations for your post!<BR/>Did you deployed a war file that uses jsp tag files? Im trying to deploy activeMQ 5.2.0 web console, but im having problems with the tag file inside /web-inf/tags/*.tag . As far i know paxWebExtender loads tld files from the web-inf folder. But in this case, it seems that pax is not handling .tag files (jsp 2 spec)<BR/><BR/>thanks!
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            Since I already have access to Camel wiki web site, it makes sense that you provide me access to the ServiceMix wiki.</div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Ade</div>
+        <div class='content'>
+            Very nice! Thanks for blogging this useful feature. We should see about getting you write access to the servicemix Wiki so that maybe you could add content like this directly to the Apache online documentation?
+            <BR/><BR/>Keep up the good work!
+        </div>
+    </div>
+</div>

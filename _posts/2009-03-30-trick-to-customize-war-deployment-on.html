@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Trick to customize war deployment  on ServiceMix4 using PAX"
+date: 2009-03-30
+comments: false
+categories:
+- PAX
+- WAR
+- ServiceMix
+---
+
+<div class='post'>
+    Here is another very interesting <span style="font-weight: bold;">trick </span>that you can use to
+    <span style="font-weight: bold;">customize </span>the war the deployment process on ServiceMix.<br/><br/><span style="font-size:85%;"><span style="font-weight: bold;">customize </span>= in this context, this word means How can I add property or extend existing of a MANIFEST file</span><br/><br/>e.g. : The WAR to be deployed contains tlb files created under the folder WEB-INF/tags/form and WEB-INF/tags/jms. By default
+    <a href="http://wiki.ops4j.org/display/ops4j/Pax+URL+-+war">PAX</a> will create a MANIFEST file containing the property Bundle-Classpath with :<br/>
+    <ul>
+        <li>WEB-INF/classes</li>
+        <li>all jars from WEB-INF/lib directory</li>
+    </ul>
+    but will not take care about your folders<br/><br/>Two possibilities are available to tell to PAX that it must include in the Bundle-Classpath your folders<br/><br/>1) Command + uri<br/><br/>This one consists in to pass the parameters as an uri like this :<br/><br/>install war:<a href="file:///d:/temp/activemq-web-console-5.2.0.war?Bundle-Classpath=">file:///d:/temp/activemq-web-console-5.2.0.war?Bundle-Classpath=</a> ., WEB-INF/tags/form, WEB-INF/tags/jms&amp;Webapp-Context= activemqweb<br/><br/>2) Create a file.bnd + command<br/><br/>Another interesting option is to provide as a file the location of the WAR and the properties that you want to add<br/>
+    <ul>
+        <li>Create a file called xxxx.bnd</li>
+        <li>Add in the file the following lines :</li>
+    </ul>
+    WAR-URL=file:///c/temp/activemq-web-console-5.2.0.war<br/>Bundle-Classpath=., WEB-INF/tags/form, WEB-INF/tags/jms<br/>Webapp-Context=activemqweb<br/>
+    <ul>
+        <li>use in your favorite OSGI server (ServiceMix) the following command to install the WAR :</li>
+    </ul>
+    install war-i:file:///c:/temp/activemq-web-console-5.2.0.bnd
+</div>
+<h2>Comments</h2>
+<div class='comments'>
+    <div class='comment'>
+        <div class='author'>cmoulliard</div>
+        <div class='content'>
+            Alin,<BR/><BR/>Are you sure that it will calculate for us ? I have used the trick here because (as mentioned by Led), the files (xxxx.tag) located in the directory /WEB-INF/tags/form and jms were not included in the Bundle-Classpath during war deployment
+        </div>
+    </div>
+    <div class='comment'>
+        <div class='author'>Alin Dreghiciu</div>
+        <div class='content'>
+            After some struggling with deploying ActiveMQ as a war using Pax Web, Pax Web Extender and war: protocol handler it is everything boiling down to (in your example):<BR/><BR/>install war:file:///d:/temp/activemq-web-console-5.2.0.war?Webapp-Context= activemqweb<BR/><BR/>or directly from Maven Central Repository:<BR/><BR/>install war:mvn:org.apache.activemq/activemq-web-console/5.2.0/war?Webapp-Context=activemqweb<BR/><BR/>or of course, the way you explained with a local file containing instructions.<BR/><BR/>The only thing to mention is that you do not actually need to set the Bundle-ClassPath because war: protocol will calculate it correctly for you.
+        </div>
+    </div>
+</div>
