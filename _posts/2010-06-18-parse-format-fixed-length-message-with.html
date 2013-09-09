@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Parse / Format fixed length message with camel-bindy"
+date: 2010-06-18
+comments: true
+categories:
+- fixed length
+- Camel
+- camel-bindy
+- Apache
+tags: []
+---
+
+<div class='post'>
+    Camel-bindy which is a data formatting tool to parse / format non XML message will be enriched in the next camel release 2.4. This new version will allow to work with Fixed Length message.<br/><br/>A Fixed Length message as its name mention it contains data positioned at a fixed position which is by far different from Comma Separate Value format where we use a separator.<br/><br/>So, you will be able able to model your message like that :<br/><br/><code><br/> @FixedLengthRecord(length=60, paddingChar=' ')<br/> public static class Order {<br/><br/> @DataField(pos = 1, length=2)<br/> private int orderNr;<br/><br/> @DataField(pos = 3, length=2)<br/> private String clientNr;<br/><br/> @DataField(pos = 5, length=9)<br/> private String firstName;<br/><br/> @DataField(pos = 14, length=5, align="L")<br/> private String lastName;<br/><br/> @DataField(pos = 19, length=4)<br/> private String instrumentCode;<br/><br/> @DataField(pos = 23, length=10)<br/> private String instrumentNumber;<br/><br/> @DataField(pos = 33, length=3)<br/> private String orderType;<br/><br/> @DataField(pos = 36, length=5)<br/> private String instrumentType;<br/><br/> @DataField(pos = 41, precision = 2, length=7)<br/> private BigDecimal amount;<br/><br/> @DataField(pos = 48, length=3)<br/> private String currency;<br/><br/> @DataField(pos = 51, length=10, pattern = "dd-MM-yyyy")<br/> private Date orderDate;<br/><br/></code><br/><br/>to parse/format the following text :<br/><br/>"10A9 PaulineM ISINXD12345678BUYShare2500.45USD01-08-2009"<br/><br/>The tool allows to add 'padding' characters and to align "LEFT" or " RIGHT" the string in the field.<br/><br/>More info are available on the wiki web page of camel-bindy : http://camel.apache.org/bindy.html
+</div>
+<h2>Comments</h2>
+<div class='comments'>
+    <div class='comment'>
+        <div class='author'>Android app development</div>
+        <div class='content'>
+            Android is an operating system such as mobile devices like smart phones and tablet computers.Android is a Linux base mobile application which is providing very fastest services .This Android Incredible features get good popularity In market.Android has a large community of developers writing applications that extend the functionality of the devices.We are also providing good logic to develop more In this field.<br/><a href="http://www.android-app-development.com" rel="nofollow">Android app developers</a>
+        </div>
+    </div>
+</div>

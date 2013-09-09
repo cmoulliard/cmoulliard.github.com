@@ -1,0 +1,38 @@
+// Typography
+// Interesting web site : http://cssfontstack.com/
+// http://www.awwwards.com/best-20-webfonts-from-google-web-fonts-and-font-face-embedding.html
+// --------------------------------------------------
+
+@base-font: 'source-sans-pro', sans-serif;
+
+// "Open Sans", "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+// font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+
+@heading-font: @base-font;
+@caption-font: @base-font;
+@code-font: 'source-code-pro', monospace;
+@alt-font: 'volkhov', serif;
+
+@doc-font-size: 16;
+@doc-line-height: 24;
+
+
+// set-up the body font-size / line-height
+body {
+	margin-top: 0px + @doc-line-height;
+	font-size: 0px + @doc-font-size;	
+}
+
+// Colors
+// --------------------------------------------------
+
+@body-color      		: #ebebeb;
+@text-color      		: #222;
+@base-color 	 		: #343434;	  
+@comp-color 	 		: spin(@base-color, 180); 
+@border-color    		: @base-color;
+@white           		: #fff;
+@black           		: #000;
+@accent-color    		: @black;
+//@link-color 		    : #222;
+@link-color 		    : #666;

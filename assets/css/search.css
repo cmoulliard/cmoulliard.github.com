@@ -1,0 +1,26 @@
+/* @group Search Results Pages */
+/* categories etc. */
+
+.results {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.results > li {
+    margin: 0 0 15px 0;
+    padding: 0 0 10px 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+}
+
+.results .date {
+    font-size: 0.8em;
+    color: #ccc;
+}
+
+.results ul.tags {
+    margin: 5px 0 0 0;
+    font-size: 0.6em;
+}
+
+/* @end Search Results Pages */
