@@ -1,4 +1,5 @@
-hr { 
+/*
+hr {
     display: block; 
     margin: 1em 0; 
     padding: 0;
@@ -6,6 +7,16 @@ hr {
     border: 0; 
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #fff; 
+}
+*/
+
+hr {
+  height: 3px;
+  // Light grey color
+  //background: #9d9d9d;
+  border: 0;
+  color: #FFD184;
+  background-color: #FFD184;
 }
 
 // Figures and images
@@ -87,6 +98,12 @@ svg:not(:root) {
   padding: 20px;
   border: 1px solid @comp-color;
   .rounded(4px);
+}
+
+// Horizontal line
+.horizontalrule {
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
 // Animations
