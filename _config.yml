@@ -4,7 +4,7 @@ description:      Apache Member, Technology Evangelist, Teacher, Speaker, Mounta
 logo:             camel.jpg
 disqus_shortname: cmoulliard
 #Comment out url when working locally to resolve base urls correctly
-# url:              http://cmoulliard.github.io
+url:              http://cmoulliard.github.io
 
 # Owner/author information
 owner:
