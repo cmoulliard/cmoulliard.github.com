@@ -1,3 +1,4 @@
+# General info
 title:            Charles Moulliard's blog
 description:      Apache Member, Technology Evangelist, Teacher, Speaker, Mountain Biker.
 logo:             camel.jpg
@@ -20,11 +21,12 @@ owner:
   flickr:         
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  google_plus: https://plus.google.com/u/0/109261084728245345002
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics: UA-43962311-1
+google_verify:
+
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
@@ -38,23 +40,30 @@ links:
 # NOT USED
 #  - title: Categories
 #    url: /categories
+#  - title: Search
+#    url: /search
   - title: Tags
     url: /tags
-  - title: Search
-    url: /search
   - title: FuseSource
     url: http://fusesource.com
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Brussels
+# Allow to post blog in the future
 future:      true
+# Support pygmentize
 pygments:    true
+# Rendering tool (rdiscount could also be used)
 markdown:    kramdown
+
+# Enable/Disable Google Search form in menu bar
+google_search_form: true
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
+# Kramdown parameters
 kramdown:
   auto_ids: true
   footnote_nr: 1
@@ -62,6 +71,7 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
+ # Syntax highlighting with markdown
   coderay:
     coderay_line_numbers: 
     coderay_line_numbers_start: 1

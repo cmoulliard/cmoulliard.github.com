@@ -10,7 +10,19 @@
 				{% endif %} 
 			</li>
 	        {% endfor %}
-	        <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a>
+            {% if site.google_search_form %}
+            <li>
+                <form action="http://google.com/search" method="get">
+                    <fieldset role="search">
+                        <input type="hidden" name="q" value="site:cmoulliard.github.io/articles" />
+                        <input style=".rounded(2px);" type="text" name="q" results="0" placeholder="Search"/>
+                    </fieldset>
+                </form>
+            </li>
+            {% endif %}
+	        <li>
+                <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a>
+            </li>
 	    </ul>
 	</nav>
 </div><!-- /.navigation-wrapper -->
