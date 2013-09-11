@@ -4,6 +4,7 @@ title: "Trick to pass an uri declared in a property file to a Camel route"
 date: 2009-05-05
 share: true
 tags: [spring]
+share: true
 ---
 
 Defining Camel uris in a file is not so easy. Until now, the only possibility was to create a camel endpoint where the uri was declared in the XML file.

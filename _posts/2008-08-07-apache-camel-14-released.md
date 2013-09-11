@@ -8,6 +8,7 @@ categories:
 - Apache Camel
 tags: [camel, apache, integration]
 comments: true
+share: true
 ---
 
 The new version of the Enterprise Service Bus (ESB) [Apache Camel](http://activemq.apache.org/camel/2008/07/22/apache-camel-140-released.html) ( 1.4.0 ) has been released.

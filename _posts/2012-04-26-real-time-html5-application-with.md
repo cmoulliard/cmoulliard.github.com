@@ -9,6 +9,7 @@ categories:
 - ActiveMQ
 - WebSocket
 tags: (html5, websocket, real-time, camel, activemq)
+share: true
 ---
 
 As part of my [presentation](http://fusesource.com/apache-camel-conference-2012/"CamelOne), I have prepared some examples to dig into what Apache

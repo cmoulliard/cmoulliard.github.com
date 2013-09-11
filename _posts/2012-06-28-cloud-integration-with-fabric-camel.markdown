@@ -9,6 +9,7 @@ categories:
 tags: [cloud, fabric, fuse]
 share: true
 comments: true
+share: true
 ---
 
 <div class='post'>
