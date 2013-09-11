@@ -216,8 +216,6 @@ figure a img{-webkit-transform:translate(0, 0);-moz-transform:translate(0, 0);-m
 @media only screen and (min-width: 62.5em){figure.half img{width:310px;float:left;margin-right:10px} figure.half figcaption{clear:left}}
 @media only screen and (min-width: 62.5em){figure.third img{width:200px;float:left;margin-right:10px} figure.third figcaption{clear:left}}
 svg:not(:root){overflow:hidden}
-.btn{display:inline-block;margin-bottom:20px;padding:8px 20px;font-size:14px;font-size:.875rem;background-color:#000;color:#fff;border:2px solid #000 !important;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px}.btn:visited{color:#fff}
-.btn:hover{background-color:#fff;color:#000}
 .well{padding:20px;border:1px solid #343434;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
 .horizontalrule{margin-left:10em;margin-right:10em}
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s}
@@ -730,3 +728,11 @@ span+.entry-title{margin-top:0}
 #goog-wm-qt{width:auto;margin-right:10px}
 #goog-wm-sb{display:inline-block;padding:8px 20px;background-color:#000;color:#fff;border:2px solid #000 !important;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px}#goog-wm-sb:visited{color:#fff}
 #goog-wm-sb:hover{background-color:#fff;color:#000}
+.btn{display:inline-block;margin-bottom:20px;padding:8px 20px;font-size:14px;font-size:.875rem;background-color:#000;color:#fff;border:2px solid #000 !important;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px}.btn:visited{color:#fff}
+.btn:hover{background-color:#fff;color:#000}
+.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.btn-info.disabled,.btn-info[disabled]{color:#ffffff;background-color:#2f96b4;*background-color:#2a85a0}
+.btn-info:active,.btn-info.active{background-color:#24748c \9}
+.btn-link{display:inline-block;margin-bottom:20px;padding:8px 20px;font-size:14px;font-size:.875rem;background-color:#d1982b;color:#fff;border:2px solid #d1982b !important;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px}.btn-link:visited{color:#fff}
+.btn-link:hover{background-color:#fff;color:#d1982b}
+btn-link-info:hover,btn-link-info:focus,btn-link-info:active,btn-link-info.active,btn-link-info.disabled,btn-link-info[disabled]{color:#ffffff;background-color:#ae752b;*background-color:#ae752b}
+btn-link-info:active,btn-link-info.active{background-color:#ae752b}
