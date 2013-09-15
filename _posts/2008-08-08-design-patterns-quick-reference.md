@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Design Patterns Quick Reference"
+title: "Design GoF Patterns Quick Reference"
 description: "Design Patterns Quick Reference of Gof Patterns"
 date: 2008-08-08
 categories:
 - GoF Patterns
-tags: [pattern, gof]
+tags: [java pattern, gof]
 comments: true
 share: true
 ---

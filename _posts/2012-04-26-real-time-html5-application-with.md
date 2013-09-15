@@ -111,47 +111,23 @@ var quote = JSON.parse(msg.data);
 In both cases, you can combine other javascript librairies (jquery, jquery-ui) to improve the design of the JSon objects to be displayed in the browser.
 Here are some screenshots about the demos
 
-<a href="{{site.url}}/assets/images//activemq-stocks.png" imageanchor="1"><img border="0" height="200" src="{{site.url}}/assets/images//activemq-stocks.png" width="146"/></a>
+<a href="{{site.url}}/assets/images//activemq-stocks.png" imageanchor="1">
+  <img border="0" height="200" src="{{site.url}}/assets/images//activemq-stocks.png" width="146"/>
+</a>
 
 Stock Trader
 
-<a href={{site.url}}/assets/images/chat-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="118" src="{{site.url}}/assets/images/chat-camel.png" width="200"/></a>
+<a href={{site.url}}/assets/images/chat-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+   <img border="0" height="118" src="{{site.url}}/assets/images/chat-camel.png" width="200"/>
+</a>
 
 Chat Room
-<a href="{{site.url}}/assets/images//news-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" height="163" src="{{site.url}}/assets/images/news-camel.png" width="200"/></a><br/>Twitter and News Feed\\n\\n\\n\\n\\n<br/>Code can be retrieved from
 
-[FuseByExample](https://github.com/FuseByExample/)</a> web site. Look to "[websocket-activemq-camel](https://github.com/FuseByExample/websocket-activemq-camel)" git hub project.
+<a href="{{site.url}}/assets/images//news-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+   <img border="0" height="163" src="{{site.url}}/assets/images/news-camel.png" width="200"/></a>
 
-Enjoy WebSocket with Apache Camel and ActiveMQ.
+Twitter and News Feed Code can be retrieved from [FuseByExample](https://github.com/FuseByExample/) web site.
 
+Look to "[websocket-activemq-camel](https://github.com/FuseByExample/websocket-activemq-camel)" git hub project.
 
-<h2>Comments</h2>
-<div class='comments'>
-    <div class='comment'>
-        <div class='author'>Tallahassee</div>
-        <div class='content'>
-            thank you very much with sharing this technique. I really appreciate it! </div>
-    </div>
-    <div class='comment'>
-        <div class='author'>cmoulliard</div>
-        <div class='content'>
-            I will have a look to solve this issue as until no I have no idea from where this message comes from.</div>
-    </div>
-    <div class='comment'>
-        <div class='author'>Charlie</div>
-        <div class='content'>
-            Hi Charles,
-            Nice work, Camel Websocket&#39;s good!
-            I&#39;ve just one question: why: from(&quot;jms:queue:subscriptionValidationError&quot;).log(&quot;Receiving error message: ${body} ${in.headers.websocket.connectionKey}&quot;)<br/> .setHeader(WebsocketConstants.CONNECTION_KEY, constant(&quot;TOTO&quot;))<br/> .log(&quot;Sending error message: ${body} ${out.headers.websocket.connectionKey}&quot;)<br/> .to(&quot;websocket://0.0.0.0:9292/subscribeErrors?staticResources=classpath:webapp&quot;);<br/></b><br/>Give me the log without connectionKey?<br/><i><br/>Receiving error message: doit suivre &quot;(-a-zA-Z0-9)+\@(-a-zA-Z0-9)+\.(a-zA-Z)+&quot; 60f7cc44-9d9b-4bde-905a-d7d51be7661a
-            <br/>Sending error message: doit suivre &quot;(-a-zA-Z0-9)+\@(-a-zA-Z0-9)+\.(a-zA-Z)+&quot;
-            <br/></i>Is it normal?
-            Have you got an idea on how to get rid of this?
-            Regards
-        </div>
-    </div>
-    <div class='comment'>
-        <div class='author'>Rob Davies</div>
-        <div class='content'>
-            That&#39;s awesome Charles! - looking forward to seeing it at CamelOne!</div>
-    </div>
-</div>
+Enjoy WebSocket with Apache Camel and ActiveMQ !
