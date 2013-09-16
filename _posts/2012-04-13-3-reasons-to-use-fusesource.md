@@ -21,7 +21,7 @@ Apache ServiceMix and Apache Karaf projects.
 
   * Reason 1 : Fuse maintains history of Apache releases
 
-    Apache websites uses Atlassian Confluence to maintain content publishes for each Apache project. This tool does not allow to create a history of the different releases
+    Apache websites use Atlassian Confluence to maintain content publishes for each Apache project. This tool does not allow to create a history of the different releases
     of Camel by example (2.6, 2.7, 2.8). This is not the case with FuseSource documentation which allow you to browse a [specific version](http://fusesource.com/documentation/) like the current.
     And with the help of google, you can make specific search like that
 
