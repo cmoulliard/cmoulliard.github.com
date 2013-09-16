@@ -2,14 +2,13 @@
 layout: page
 title: Latest Posts
 description: "Charles Moulliard's blog"
-tags: [blog, integration, cmoulliard, camel, karaf, servicemix, fabric, JEE, middleware]
 ---
 
 <ul class="post-list">
 {% for post in site.posts limit:5 %}
   <li>
       <article>
-        <a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a>
+          <a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a>
       </article>
   </li>
 {% endfor %}

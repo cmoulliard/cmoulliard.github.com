@@ -3616,8 +3616,6 @@ span + .entry-title {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  font-size: 22px;
-  font-size: 1.375rem;
 }
 .entry-content p:first-child {
   margin-top: 0;

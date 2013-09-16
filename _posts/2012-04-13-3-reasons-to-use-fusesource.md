@@ -10,7 +10,7 @@ categories:
 - Apache
 - ServiceMix
 - Documentation
-tags: [documentation, fusesource]
+tags: documentation fusesource
 share: true
 ---
 

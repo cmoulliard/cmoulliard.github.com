@@ -6,6 +6,8 @@ disqus_shortname: cmoulliard
 #Comment out url when working locally to resolve base urls correctly
 # url:              http://cmoulliard.github.io
 
+display_content: false
+
 # Owner/author information
 owner:
   name:           Charles Moulliard
