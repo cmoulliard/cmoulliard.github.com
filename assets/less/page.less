@@ -209,7 +209,8 @@ body {
 	a { color: @text-color; }
 }
 span + .entry-title {
-	margin-top: 0;
+    // 	margin-top: 0px;
+	margin-top: 25px;
 }
 .entry-title {
 	font-family: @alt-font;
@@ -218,18 +219,21 @@ span + .entry-title {
 	//font-weight: 700;
     font-weight: 400;
 	line-height: 1;
-	letter-spacing: -3px;
+    //letter-spacing: -3px;
+	letter-spacing: -2px;
 	a {
 		color: @black;
 		text-decoration: underline;
 	}
 	@media @medium {
 		max-width: 600px;
-		.font-rem(52);
+        //.font-rem(52);
+		.font-rem(34);
 	}
 	@media @large {
 		max-width: 800px;
-		.font-rem(68);
+        //.font-rem(68);
+		.font-rem(50);
 	}
 }
 

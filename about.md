@@ -2,7 +2,7 @@
 layout: page
 permalink: /about/index.html
 title: About me
-tags: [Fuse, Evangelist, Integration]
+tags: Fuse Evangelist Integration
 ---
 
 Charles Moulliard is currently a Sr. Enterprise Architect @RedHat and Apache Committer with more than 19 years of

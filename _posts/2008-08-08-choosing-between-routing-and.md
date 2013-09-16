@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "How to choose between Routing & Orchestration - ESB ?"
-description: "How to choose between Routing & Orhcestration - ESB ?"
+description: "How to choose between Routing & Orchestration - ESB ?"
 date:   2008-08-08
-tags: [ESB, routing, orchestration]
+tags: ESB routing orchestration
 comments: true
 share: true
 ---

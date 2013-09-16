@@ -3,7 +3,7 @@ layout: post
 title: "Trick to pass an uri declared in a property file to a Camel route"
 date: 2009-05-05
 share: true
-tags: [spring]
+tags: spring
 share: true
 ---
 

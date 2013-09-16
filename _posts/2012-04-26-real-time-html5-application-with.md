@@ -4,11 +4,9 @@ title: "Real Time HTML5 application with Websocket and ActiveMQ/camel"
 date: 2012-04-26
 comments: true
 categories:
-- Apache Camel
-- HTML5
-- ActiveMQ
 - WebSocket
-tags: (html5, websocket, real-time, camel, activemq)
+- Integration
+tags: html5 websocket real-time camel activemq
 share: true
 ---
 
