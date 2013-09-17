@@ -111,7 +111,10 @@ The following trace shows that :
 - The server acknowledge the reception (= processing) of the messages
 
 {% highlight text %}
-    >>>>> Invoking reportIncident ... for accident : 024-févr.-2010 9:48:39 org.apache.cxf.transport.http.HTTPConduit setUpDecoupledDestinationINFO: creating decoupled endpoint: http://localhost:9999/camel-example/incident2010-02-24 09:48:39.796::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog2010-02-24 09:48:39.828::INFO:  jetty-6.1.212010-02-24 09:48:39.921::INFO:  Started SelectChannelConnector@localhost:999924-févr.-2010 9:48:40 org.apache.cxf.ws.rm.Proxy invokeINFO: Sending out-of-band RM protocol message {http://schemas.xmlsoap.org/ws/2005/02/rm}CreateSequence.24-févr.-2010 9:48:41 org.apache.cxf.interceptor.LoggingOutInterceptor$LoggingCallback onCloseINFO: Outbound Message
+{% endhighlight %}
+
+<textarea rows="10" cols="60">
+>>>>> Invoking reportIncident ... for accident : 024-févr.-2010 9:48:39 org.apache.cxf.transport.http.HTTPConduit setUpDecoupledDestinationINFO: creating decoupled endpoint: http://localhost:9999/camel-example/incident2010-02-24 09:48:39.796::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog2010-02-24 09:48:39.828::INFO:  jetty-6.1.212010-02-24 09:48:39.921::INFO:  Started SelectChannelConnector@localhost:999924-févr.-2010 9:48:40 org.apache.cxf.ws.rm.Proxy invokeINFO: Sending out-of-band RM protocol message {http://schemas.xmlsoap.org/ws/2005/02/rm}CreateSequence.24-févr.-2010 9:48:41 org.apache.cxf.interceptor.LoggingOutInterceptor$LoggingCallback onCloseINFO: Outbound Message
 ---------------------------ID: 1Address: http://localhost:8080/cxf/camel-example/incidentEncoding: UTF-8Content-Type: text/xmlHeaders: {SOAPAction=["http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequence"], Connection=[Keep-Alive], Accept=[*/*]}Payload:<soap:envelope soap="http://schemas.xmlsoap.org/soap/envelope/">
 <soap:header>
   <action xmlns="http://schemas.xmlsoap.org/ws/2004/08/addressing">http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequence</action>
@@ -285,8 +288,8 @@ ID: 6Response-Code: 202Encoding: UTF-8Content-Type: text/xml; charset=utf-8Heade
     </soap:header>
   </soap:envelope>
 </soap:envelope>
-</soap:envelope>    
-{% endhighlight %}
+</soap:envelope>
+</textarea>
 
 **Conclusion**
 
