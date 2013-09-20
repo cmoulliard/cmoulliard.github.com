@@ -115,14 +115,15 @@ Here are some screenshots about the demos
 
 Stock Trader
 
-<a href={{site.url}}/assets/images/chat-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
+<a href={{site.url}}/assets/images/chat-camel.png" imageanchor="1">
    <img border="0" height="118" src="{{site.url}}/assets/images/chat-camel.png" width="200"/>
 </a>
 
 Chat Room
 
-<a href="{{site.url}}/assets/images//news-camel.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
-   <img border="0" height="163" src="{{site.url}}/assets/images/news-camel.png" width="200"/></a>
+<a href="{{site.url}}/assets/images//news-camel.png" imageanchor="1">
+   <img border="0" height="163" src="{{site.url}}/assets/images/news-camel.png" width="200"/>
+</a>
 
 Twitter and News Feed Code can be retrieved from [FuseByExample](https://github.com/FuseByExample/) web site.
 
