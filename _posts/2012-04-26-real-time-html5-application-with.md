@@ -115,7 +115,7 @@ Here are some screenshots about the demos
 
 Stock Trader
 
-<a href={{site.url}}/assets/images/chat-camel.png" imageanchor="1">
+<a href="{{site.url}}/assets/images/chat-camel.png" imageanchor="1">
    <img border="0" height="118" src="{{site.url}}/assets/images/chat-camel.png" width="200"/>
 </a>
 
