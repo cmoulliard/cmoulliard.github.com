@@ -13,8 +13,6 @@ image:
   creditlink: cmoulliard.github.io
 comments: true
 share: true
-comments: true
-share: true
 ---
 
 Since the launch of <a href="http://fusesource.com/products/fuse-esb-enterprise/" target="_blank">Fuse ESB 7</a>, <a href="http://fusesource.com/products/fuse-mq-enterprise/" target="_blank">Fuse MB 7</a>
