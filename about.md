@@ -30,6 +30,7 @@ You can find him online #irc - ch007m, on Twitter ([@cmoulliard](http://twitter.
 * ApacheCon 2012 - Germany
 - [Integration in the cloud - IPaaS with Fuse technology](http://www.apachecon.eu/schedule/presentation/141/)
 - [Karaf - When OSGI modularity meets J2EE world](http://www.apachecon.eu/schedule/presentation/183/)
+- [Fuse 2013 Conference - Utrecht](https://jbossfuse2013.eventbrite.nl/)
 
 ## Publications
 
