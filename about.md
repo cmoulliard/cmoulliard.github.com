@@ -22,14 +22,14 @@ You can find him online #irc - ch007m, on Twitter ([@cmoulliard](http://twitter.
 
 ## Events
 
-* [ParisJug 2011](http://www.parisjug.org/xwiki/bin/view/Meeting/20110510)
-* [BeJug 2011](http://bejug.org/confluenceBeJUG/display/BeJUG/Integration+with+Apache+Camel+and+ESB)
-* [ITCork 2011](http://www.itcork.ie/index.cfm?page=events&eventId=229)
-* [Devoxx 2011](http://www.devoxx.com/display/DV11/Hands+on+with+Apache+ActiveMQ%2C+ServiceMix%2C+Camel+and+CXF,http://www.devoxx.com/display/DV11/Hands+on+with+Apache+ActiveMQ%2C+ServiceMix%2C+Camel+and+CXF)
-* [CamelOne 2012 - Boston](http://fusesource.com/apache-camel-conference-2012/camelone_speakers_2012/#cmoulliard)
-* ApacheCon 2012 - Germany
-- [Integration in the cloud - IPaaS with Fuse technology](http://www.apachecon.eu/schedule/presentation/141/)
-- [Karaf - When OSGI modularity meets J2EE world](http://www.apachecon.eu/schedule/presentation/183/)
+- [ParisJug 2011](http://www.parisjug.org/xwiki/bin/view/Meeting/20110510)
+- [BeJug 2011](http://bejug.org/confluenceBeJUG/display/BeJUG/Integration+with+Apache+Camel+and+ESB)
+- [ITCork 2011](http://www.itcork.ie/index.cfm?page=events&eventId=229)
+- [Devoxx 2011](http://www.devoxx.com/display/DV11/Hands+on+with+Apache+ActiveMQ%2C+ServiceMix%2C+Camel+and+CXF,http://www.devoxx.com/display/DV11/Hands+on+with+Apache+ActiveMQ%2C+ServiceMix%2C+Camel+and+CXF)
+- [CamelOne 2012 - Boston](http://fusesource.com/apache-camel-conference-2012/camelone_speakers_2012/#cmoulliard)
+- ApacheCon 2012 - Germany
+  * [Integration in the cloud - IPaaS with Fuse technology](http://archive.apachecon.com/eu2012/presentations/06-Tuesday/L2R_Cloud/aceu-2012-integration-in-the-cloud-IPaaS-with-fuse-technology.pdf)
+  * [Karaf - When OSGI modularity meets J2EE world](http://archive.apachecon.com/eu2012/presentations/07-Wednesday/RN-Big_Data/aceu-2012-karaf-when-osgi-modularity-meets-j2ee-world_present-and%20future.pdf)
 - [Fuse 2013 Conference - Utrecht](https://jbossfuse2013.eventbrite.nl/)
 
 ## Publications
