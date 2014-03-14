@@ -1,3 +1,10 @@
+---
+layout: page
+permalink: /talks/index.html
+title: Some of my talks
+tags: Talk Integration
+---
+
 ## Title : Improve your Documentation publication process 
 
 ## Abstract : 

@@ -50,6 +50,8 @@ links:
   - title: FuseSource
     url: http://fusesource.com
     external: true
+  - title: Talks
+    url: /talks  
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Brussels
