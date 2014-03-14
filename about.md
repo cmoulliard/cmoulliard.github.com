@@ -5,7 +5,7 @@ title: About me
 tags: Fuse Evangelist Integration
 ---
 
-Charles Moulliard is currently a Sr. Enterprise Architect @RedHat and Apache Committer with more than 19 years of
+Charles Moulliard is currently a Sr. Principal Solution Architect @RedHat and Apache Committer with more than 19 years of
 expertise in solutions design based on JEE / Middleware technologies.
 
 As Engineer & Architect, he has been involved in system integration of projects in Financial and Banking world.
@@ -15,10 +15,10 @@ security and infrastructure requirements and transpose them into operable and ef
 
 He is also fascinated to train people on SOA, OSGI, ESB & JEE and provide consultancy.
 
-As an Apache Committer he contributes since several years on the projects Apache Camel, Karaf, ServiceMix, DeltaSpike, Fuse Fabric and uses these technologies as standards
+As an Apache Committer he contributes since several years on opensource projects Apache [Camel](http://camel.apache.org), [Karaf](http://karaf.apache.org), [ServiceMix](http://servicemix.apache.org), [DeltaSpike](http://deltaspike.apache.org), [Fabric8](http://fabric8.io), [Hawtio](http://hawt.io), [Drools](https://github.com/droolsjbpm/), [Asciidoctor](http://asciidoctor.org/) and uses these technologies as standards
 for integration projects. He is a Technology Evangelist making regularly conferences, talks. He lives in Belgium, enjoy mountain bike & Rock'n'roll.
 
-You can find him online #irc - ch007m, on Twitter ([@cmoulliard](http://twitter.com/cmoulliard)) or on his [blog](http://cmoulliard.blogspot.com).
+You can find him online **#irc ch007m**, **Twitter [@cmoulliard](http://twitter.com/cmoulliard)**, **[Github](https://github.com/cmoulliard)**, **[Linkedin](be.linkedin.com/in/charlesmoulliard/)**, **[SlideShare](http://www.slideshare.net/cmoulliard)** or on his [blog](http://cmoulliard.blogspot.com).
 
 ## Events
 
@@ -26,11 +26,15 @@ You can find him online #irc - ch007m, on Twitter ([@cmoulliard](http://twitter.
 - [BeJug 2011](http://bejug.org/confluenceBeJUG/display/BeJUG/Integration+with+Apache+Camel+and+ESB)
 - [ITCork 2011](http://www.itcork.ie/index.cfm?page=events&eventId=229)
 - [Devoxx 2011](http://www.devoxx.com/display/DV11/Hands+on+with+Apache+ActiveMQ%2C+ServiceMix%2C+Camel+and+CXF,http://www.devoxx.com/display/DV11/Hands+on+with+Apache+ActiveMQ%2C+ServiceMix%2C+Camel+and+CXF)
+  * Hands on with Apache ActiveMQ, ServiceMix, Camel and CXF
 - [CamelOne 2012 - Boston](http://fusesource.com/apache-camel-conference-2012/camelone_speakers_2012/#cmoulliard)
+  * Develop Real Time Applications – HTML5 using WebSocket and Apache Camel and ActiveMQ
 - ApacheCon 2012 - Germany
   * [Integration in the cloud - IPaaS with Fuse technology](http://archive.apachecon.com/eu2012/presentations/06-Tuesday/L2R_Cloud/aceu-2012-integration-in-the-cloud-IPaaS-with-fuse-technology.pdf)
   * [Karaf - When OSGI modularity meets J2EE world](http://archive.apachecon.com/eu2012/presentations/07-Wednesday/RN-Big_Data/aceu-2012-karaf-when-osgi-modularity-meets-j2ee-world_present-and%20future.pdf)
 - [Fuse 2013 Conference - Utrecht](https://jbossfuse2013.eventbrite.nl/)
+- [DevNation 2014 - San Francisco](http://www.devnation.org/)
+  * [Development of Social Network Projects with Camel](pic.twitter.com/kRoZFezyM2) 
 
 ## Publications
 
