@@ -32,9 +32,13 @@ You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cm
 - ApacheCon 2012 - Germany
   * [Integration in the cloud - IPaaS with Fuse technology](http://archive.apachecon.com/eu2012/presentations/06-Tuesday/L2R_Cloud/aceu-2012-integration-in-the-cloud-IPaaS-with-fuse-technology.pdf)
   * [Karaf - When OSGI modularity meets J2EE world](http://archive.apachecon.com/eu2012/presentations/07-Wednesday/RN-Big_Data/aceu-2012-karaf-when-osgi-modularity-meets-j2ee-world_present-and%20future.pdf)
+- [Build a cloud stack 2013 - Ghent](http://open.citrix.com/bacd-ghent-2013.html)
+  * [An integrated PaaS using Fuse fabric and Apache Karaf by Charles](http://www.slideshare.net/cmoulliard/ipaas-with-fuse-fabric-technology)   
 - [Fuse 2013 Conference - Utrecht](https://jbossfuse2013.eventbrite.nl/)
-- [DevNation 2014 - San Francisco](http://www.devnation.org/)
-  * [Development of Social Network Projects with Camel](pic.twitter.com/kRoZFezyM2) 
+- [DevNation 2014 - San Francisco](http://lanyrd.com/2014/devnation14/scxrcf/)
+  * [Development of Social Network Projects with Camel](https://github.com/cmoulliard/devnation-2014-demos, http://goo.gl/PVjSdF) 
+- [ICTexpo 2014 @Easyfairs - Helsinki](http://www.easyfairs.com/events_216/ictexpo-helsinki2014_45506/ictexpo-helsinki-2014_45507/)
+  * Agile application integration with open source 
 
 ## Publications
 
