@@ -2,12 +2,12 @@
 layout: post
 title: "Talks about Integration with Camel & ESB"
 date: 2011-02-24
-tags:
 image:
   feature: croatia-2.png
   credit: Charles Moulliard
   creditlink: cmoulliard.github.io
 comments: true
+tags: integration, apache camel, Fuse
 share: true
 ---
 

@@ -5,7 +5,7 @@ description: "Design Patterns Quick Reference of Gof Patterns"
 date: 2008-08-08
 categories:
 - GoF Patterns
-tags: java, pattern, gof, composite tag name 3 words
+tags: java, pattern, gof, composite tag name 3 words, Fuse
 comments: true
 share: true
 ---

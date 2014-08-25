@@ -10,7 +10,7 @@ categories:
 - Camel
 - OSGI
 - ServiceMix
-tags:
+tags: OSGI, SOA, Spring DM, Fuse
 share: true
 ---
 

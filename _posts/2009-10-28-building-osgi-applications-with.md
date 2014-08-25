@@ -7,7 +7,7 @@ categories:
 - OSGI
 - Apache
 - Blueprint
-tags:
+tags: OSGI, Blueprint, Container, Fuse
 share: true
 ---
 

@@ -7,7 +7,7 @@ categories:
 - PAX
 - Spring DM
 - OSGI
-tags:
+tags: PAx, Spring DM, OSGI,  Fuse
 share: true
 ---
 

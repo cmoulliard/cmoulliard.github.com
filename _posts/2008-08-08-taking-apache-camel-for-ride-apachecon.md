@@ -2,7 +2,7 @@
 layout: post
 title: "Talking Apache Camel for a ride (ApacheCon 11/05/2008)"
 date: 2008-08-08
-tags: apache conference camel
+tags: apache conference camel  Fuse
 comments: true
 share: true
 ---

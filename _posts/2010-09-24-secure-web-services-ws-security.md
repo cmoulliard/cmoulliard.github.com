@@ -2,7 +2,7 @@
 layout: post
 title: "Secure Web Services - WS-Security"
 date: 2010-09-24
-tags:
+tags: webservice, ws-security, Fuse
 comments: true
 ---
 

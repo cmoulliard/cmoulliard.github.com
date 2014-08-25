@@ -7,7 +7,7 @@ categories:
 - SMX4
 - Web Application Server
 - ServiceMix
-tags:
+tags: ServiceMix, Web Container, Fuse
 share: true
 ---
 

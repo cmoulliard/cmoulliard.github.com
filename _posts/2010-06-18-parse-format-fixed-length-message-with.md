@@ -8,7 +8,7 @@ categories:
 - Camel
 - camel-bindy
 - Apache
-tags: camel bindy dataformat
+tags: apache camel, bindy, dataformat, Fuse
 share: true
 ---
 

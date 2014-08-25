@@ -3,7 +3,7 @@ layout: post
 title: "Distributed OSGi – A Simple Example"
 date: 2009-04-21
 comments: true
-tags:
+tags: Distributed OSGI, ServiceMix, Fuse
 share: true
 ---
 

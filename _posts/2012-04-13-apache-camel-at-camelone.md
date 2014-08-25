@@ -8,7 +8,7 @@ categories:
 - Apache Camel
 - CamelOne
 - Conference
-tags: conference camelone
+tags: conference, camelone, Fuse
 share: true
 ---
 

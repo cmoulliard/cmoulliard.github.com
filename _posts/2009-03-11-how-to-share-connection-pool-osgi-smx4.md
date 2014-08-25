@@ -7,7 +7,7 @@ categories:
 - SMX4
 - OSGI
 - ServiceMix
-tags:
+tags: SMX4, OSGI, ServiceMix, Fuse
 share: true
 ---
 

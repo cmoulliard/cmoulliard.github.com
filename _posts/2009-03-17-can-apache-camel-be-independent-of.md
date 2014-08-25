@@ -10,7 +10,7 @@ categories:
 - OSGI
 - Apache
 - ServiceMix
-tags:
+tags: Camel, JMS, ServiceMix, Fuse
 share: true
 ---
 

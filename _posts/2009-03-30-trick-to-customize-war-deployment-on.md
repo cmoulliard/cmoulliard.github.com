@@ -7,7 +7,7 @@ categories:
 - PAX
 - WAR
 - ServiceMix
-tags:
+tags: ServiceMix, Pax Web, WAR, Fuse
 share: true
 ---
 

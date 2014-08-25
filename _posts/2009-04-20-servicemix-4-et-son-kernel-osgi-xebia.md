@@ -3,7 +3,7 @@ layout: post
 title: "ServiceMix 4 et son kernel OSGi (Xebia France)"
 date: 2009-04-20
 comments: true
-tags:
+tags: ServiceMix, OSGI, Xebia
 share: true
 ---
 

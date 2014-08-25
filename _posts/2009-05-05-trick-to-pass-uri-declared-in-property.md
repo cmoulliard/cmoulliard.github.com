@@ -3,7 +3,7 @@ layout: post
 title: "Trick to pass an uri declared in a property file to a Camel route"
 date: 2009-05-05
 share: true
-tags: spring
+tags: spring, OSGI, Apache Camel, Fuse
 share: true
 ---
 
@@ -22,7 +22,6 @@ Step 1 : Create org.springframework.beans.factory.config.PropertyPlaceholderConf
 Define a PropertyPlaceHolder (using another prefix/suffix delimiter) to avoid conflict between your camel variable and Spring property
 
 {% highlight xml %}
-
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 
     <property name="placeholderPrefix" value="#{"> (1)

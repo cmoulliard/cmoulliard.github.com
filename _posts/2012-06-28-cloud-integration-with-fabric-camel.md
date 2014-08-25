@@ -6,7 +6,7 @@ categories:
  - Fuse Fabric
  - Cloud
  - Apache Camel
-tags: cloud fabric fuse
+tags: cloud, fabric, Fuse
 image:
   feature: croatia-4.png
   credit: Charles Moulliard

@@ -6,7 +6,7 @@ date: 2008-08-07
 categories:
 - Integration
 - Apache Camel
-tags: camel, apache, integration
+tags: camel apache integration  Fuse
 comments: true
 share: true
 ---

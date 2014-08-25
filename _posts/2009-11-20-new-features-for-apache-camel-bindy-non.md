@@ -3,7 +3,7 @@ layout: post
 title: "New features for Apache Camel Bindy (non XML binding framework)"
 date: 2009-11-20
 comments: true
-tags: camel bindy dataformat
+tags: apache camel, bindy, dataformat, Fuse
 share: true
 ---
 

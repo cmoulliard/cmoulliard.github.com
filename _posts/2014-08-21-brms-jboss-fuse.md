@@ -2,7 +2,7 @@
 layout: post
 title: "BRMS runs on OSGI container JBoss Fuse !"
 date: 2014-08-22
-tags: apache camel drools jbpm brms jbossfuse rules
+tags: apache camel drools jbpm brms jbossfuse rules Fuse
 share: true
 ---
 

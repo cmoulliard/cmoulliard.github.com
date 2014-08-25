@@ -2,7 +2,7 @@
 layout: post
 title: "Publication about Introduction to Apache Camel (Part I)"
 date: 2013-10-01
-tags: apache camel publication jaxenter
+tags: apache camel, publication, jaxenter, Fuse
 image:
   feature: croatia-4.png
   credit: Charles Moulliard
