@@ -5,6 +5,18 @@ title: Some of my talks
 tags: Talk Integration
 ---
 
+## Title : Hawtio – The modular AngularJS Web Console for managing your Java JMX stuffs
+
+## Abstract :
+
+The management of java applications is mainly based on JMX technology and rely on MBeans objects & MBean server. While many client tools exist, ... they are mostly used by developer and not by teams in charge of the operations. Moreover JMX uses "proprietary" protocols for the communication between the agent and the server (RMI, IIOP, ...) which are generally not allowed for different reasons by the security advisers.
+The goal of the hawtio project is to propose a Web HTML5 architecture to let the developer to manage their MBeans and extend them with specific plugins using a jolokia gateway which is a bridge between the MBean Server, translating REST JSON requests into JMX calls.
+During this talk, we’ll present what is the internal architecture of the platform (html5 - jolokia - angularJS) & how we can connect/inspect different JVMs using web Console. Next, we will have a look to some of the plugins developed & explore the various ways how hawtio can be extended; developing a plugin, design your own dashboard and manage the resources using git -wiki.
+Slides, code & demos
+
+
+****************************************************
+
 ## Title : Improve your Documentation publication process 
 
 ## Abstract : 
