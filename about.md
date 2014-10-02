@@ -18,7 +18,7 @@ He is also fascinated to train people on SOA, OSGI, ESB & JEE and provide consul
 As an Apache Committer he contributes since several years on opensource projects Apache [Camel](http://camel.apache.org), [Karaf](http://karaf.apache.org), [ServiceMix](http://servicemix.apache.org), [DeltaSpike](http://deltaspike.apache.org), [Fabric8](http://fabric8.io), [Hawtio](http://hawt.io), [Drools](https://github.com/droolsjbpm/), [Asciidoctor](http://asciidoctor.org/) and uses these technologies as standards
 for integration projects. He is a Technology Evangelist making regularly conferences, talks. He lives in Belgium, enjoy mountain bike & Rock'n'roll.
 
-You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cmoulliard), GitHub [https://github.com/cmoulliard](https://github.com/cmoulliard), [Linkedin](http://be.linkedin.com/in/charlesmoulliard/), [SlideShare](http://www.slideshare.net/cmoulliard), [Google+](http://google.com/+CharlesMoulliard) or on his Blog [http://cmoulliard.blogspot.com](http://cmoulliard.github.io).
+You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cmoulliard), GitHub [https://github.com/cmoulliard](https://github.com/cmoulliard), [Linkedin](http://be.linkedin.com/in/charlesmoulliard/), [SlideShare](http://www.slideshare.net/cmoulliard), [Google+](http://google.com/+CharlesMoulliard) or on his Blog [http://cmoulliard.github.io](http://cmoulliard.github.io).
 
 ## Events
 
