@@ -81,3 +81,11 @@ After a short introduction to OSGi (Modularity) and CDI (Context & Dependency In
 
 To conclude we’ll show some interesting patterns/demos that can be implemented.
 
+***************************************************
+
+## DSL and Lambdas: the perfect match for more readable and maintainable code
+
+## Abstract:
+
+Software Code is written once but will be read many times and understanding what it does could often be harder than writing it for the first time. That's why readability is a key feature to achieve better maintainability. The adoption of FluentAPI or well designed DSL can dramatically improve it. Functional programming with the declarative style it implies is a perfect fit for creating readable and expressive DSL. The main goal of the talk is to show some techniques and give some hints to design and implement effective and readable DSLs, mostly leveraging the new functional Lambdas features provided by Java 8. The most important patterns that can be helpful for DSL implementation will be explained with many practical examples also showing how some frameworks like Camel and Drools use them.
+
