@@ -89,3 +89,15 @@ To conclude we’ll show some interesting patterns/demos that can be implemented
 
 Software Code is written once but will be read many times and understanding what it does could often be harder than writing it for the first time. That's why readability is a key feature to achieve better maintainability. The adoption of FluentAPI or well designed DSL can dramatically improve it. Functional programming with the declarative style it implies is a perfect fit for creating readable and expressive DSL. The main goal of the talk is to show some techniques and give some hints to design and implement effective and readable DSLs, mostly leveraging the new functional Lambdas features provided by Java 8. The most important patterns that can be helpful for DSL implementation will be explained with many practical examples also showing how some frameworks like Camel and Drools use them.
 
+*****************************************************
+
+## Benefit of microservice & microcontainer architectures
+
+## Abstract:
+
+Microservice & microcontainer aren't new concepts but they gained momentum since a couple months with the emergence of new technology or patterns like Docker, SpringBoot, Kubernetes, Fast messaging, Decentralized Bus, ...
+
+SOA & Integration architectures have been designed for a while around central monolithic ESB, Servers but this model has failed for many reasons (lack of agility, flexibility to evolve according to business changes, ...). Moving to microservice & microcontainer require to figure out what are the benefits, pros & cons and how such technology could be used to match the business requirements and manage, maintain in a more fluent ways the applications.
+
+The goal of this talk is to review the strengths and weaknesses of the "Microservice & microcontainer" architectures/patterns but also to present a "real" use case designed using the Fuse Fabric8 technology with the container Docker, the integration framework Apache Camel, the Fabric8 Gateway (HTTP) and the event message MQTT protocol of Apache ActiveMQ.
+
