@@ -6,7 +6,7 @@ categories:
 - SMX4
 - OSGI
 - ServiceMix
-tags: Apache SMX4 OSGi ServiceMix Fuse
+tags: [servicemix, smx4, osgi, fuse]
 comments: true
 share: true
 ---

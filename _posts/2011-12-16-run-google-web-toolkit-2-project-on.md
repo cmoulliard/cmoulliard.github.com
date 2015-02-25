@@ -10,7 +10,7 @@ categories:
 - WAR
 - Apache
 - ServiceMix
-tags: google gwt Pax-web OSGi ServiceMix Fuse
+tags: [google-gwt, pax-web, osgi, servicemix, fuse]
 comments: true
 share: true
 ---

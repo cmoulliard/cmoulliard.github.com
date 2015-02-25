@@ -6,7 +6,7 @@ comments: true
 categories:
 - WebSocket
 - Integration
-tags: html5 websocket real-time camel activemq
+tags: [html5, websocket, real-time, camel, activemq]
 comment: true
 share: true
 ---
@@ -126,8 +126,8 @@ Chat Room
    <img border="0" height="163" src="{{site.url}}/assets/images/news-camel.png" width="200"/>
 </a>
 
-Twitter and News Feed Code can be retrieved from [FuseByExample](https://github.com/FuseByExample/) web site.
+Twitter and News Feed Code can be retrieved from [fuseByExample](https://github.com/fuseByExample/) web site.
 
-Look to "[websocket-activemq-camel](https://github.com/FuseByExample/websocket-activemq-camel)" git hub project.
+Look to "[websocket-activemq-camel](https://github.com/fuseByExample/websocket-activemq-camel)" git hub project.
 
 Enjoy WebSocket with Apache Camel and ActiveMQ !

@@ -2,7 +2,7 @@
 layout: post
 title: "Run Camel route in ServiceMix 3.3.x"
 date: 2010-03-30
-tags: apache servicemix esb camel Fuse
+tags: [servicemix, esb, camel, fuse]
 comments: true
 share: true
 ---

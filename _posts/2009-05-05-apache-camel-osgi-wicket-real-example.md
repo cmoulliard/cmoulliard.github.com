@@ -3,7 +3,7 @@ layout: post
 title: "Apache Camel / OSGI / Wicket (real example - tutorial part2)"
 date: 2009-05-05
 comments: true
-tags: Apache Wicket Real-Example OSGi ServiceMix Fuse
+tags: [wicket, camel, servicemix, persistence, real-example, osgi, fuse]
 share: true
 ---
 

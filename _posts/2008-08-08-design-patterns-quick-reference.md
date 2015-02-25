@@ -5,7 +5,7 @@ description: "Design Patterns Quick Reference of Gof Patterns"
 date: 2008-08-08
 categories:
 - GoF Patterns
-tags: java pattern gof Fuse
+tags: [java, pattern-gof, fuse]
 comments: true
 share: true
 ---

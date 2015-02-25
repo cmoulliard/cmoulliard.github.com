@@ -2,7 +2,7 @@
 layout: post
 title: "Measure elapsed time with Camel"
 date: 2011-02-23
-tags: apache camel event-notifier Fuse
+tags: [camel, event-notifier, fuse]
 comments: true
 share: true
 ---

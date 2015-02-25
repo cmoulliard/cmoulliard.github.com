@@ -3,7 +3,7 @@ layout: post
 title: "The power of Apache wicket and Spring OSGI Service top of ServiceMix 4"
 date: 2009-04-14
 comments: true
-tags: Apache Wicket ServiceMix Fuse
+tags: [wicket, servicemix, fuse]
 ---
 
 In a previous post, I have explained how you can transform ServiceMix 4 as a Web Application Server. In this new post, I will show you How you can combine the power of Apache Wicket and Spring OSGI services together on ServiceMix 4 with the help of PAX Web.

@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Started with OSGi"
 date: 2008-08-08
-tags: osgi Fuse
+tags: [osgi, fuse]
 comments: true
 share: true
 ---

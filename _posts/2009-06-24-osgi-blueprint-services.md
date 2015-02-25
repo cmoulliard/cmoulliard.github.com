@@ -3,7 +3,7 @@ layout: post
 title: "OSGi Blueprint Services"
 date: 2009-06-24
 comments: true
-tags: OSGi Apache Aries Blueprint Fuse
+tags: [osgi, aries, blueprint, fuse]
 share: true
 ---
 

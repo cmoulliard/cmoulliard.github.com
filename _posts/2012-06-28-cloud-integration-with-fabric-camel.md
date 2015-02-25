@@ -3,10 +3,10 @@ layout: post
 title: "Cloud Integration with Fabric Camel (Part I)"
 date: 2012-06-28
 categories:
- - Fuse Fabric
+ -, fuse] Fabric
  - Cloud
  - Apache Camel
-tags: cloud fabric8 integration middleware Fuse
+tags: [cloud, fabric8, integration, middleware, fuse]
 image:
   feature: croatia-4.png
   credit: Charles Moulliard
@@ -15,9 +15,9 @@ comments: true
 share: true
 ---
 
-Since the launch of <a href="http://fusesource.com/products/fuse-esb-enterprise/" target="_blank">Fuse ESB 7</a>, <a href="http://fusesource.com/products/fuse-mq-enterprise/" target="_blank">Fuse MB 7</a>
-and in fact the official release of&nbsp;<a href="http://fuse.fusesource.org/fabric/download.html" target="_blank">Fuse Fabric</a>, Camel has moved in a new era called "Cloud Integration&nbsp;where machines,
-services are distributed everywhere.<br /><a href="http://www.fusesource.com/" target="_blank">FuseSource</a>&nbsp;(which is now part of <a href="http://www.redhat.com/" target="_blank">RedHat</a> company)
+Since the launch of <a href="http://fusesource.com/products/fuse-esb-enterprise/" target="_blank">fuse ESB 7</a>, <a href="http://fusesource.com/products/fuse-mq-enterprise/" target="_blank">fuse MB 7</a>
+and in fact the official release of&nbsp;<a href="http://fuse.fusesource.org/fabric/download.html" target="_blank">fuse Fabric</a>, Camel has moved in a new era called "Cloud Integration&nbsp;where machines,
+services are distributed everywhere.<br /><a href="http://www.fusesource.com/" target="_blank">fuseSource</a>&nbsp;(which is now part of <a href="http://www.redhat.com/" target="_blank">RedHat</a> company)
 is the leader of "Integration Everywhere" has supported the development of the Fabric project to facilitate the creation of such integration project in the "cloud".<br /><br />
 
 With Fabric, the information of the Camel endpoints are registered in a global registry which can be accessed by the different machines part of the cloud.

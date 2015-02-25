@@ -5,7 +5,7 @@ date: 2009-11-02
 comments: true
 categories:
 - apache camel linkedln
-tags: Apache Camel Group Linkedin Fuse
+tags: [camel, social-group, linkedin, fuse]
 share: true
 ---
 

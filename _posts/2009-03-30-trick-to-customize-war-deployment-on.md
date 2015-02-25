@@ -6,7 +6,7 @@ categories:
 - PAX
 - WAR
 - ServiceMix
-tags: Apache ServiceMix Pax-Web Fuse
+tags: [servicemix, pax-web, fuse]
 comments: true
 share: true
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Secure Web Services - WS-Security"
 date: 2010-09-24
-tags: webservice ws-security integration Fuse
+tags: [webservice, ws-security, integration, fuse]
 comments: true
 ---
 

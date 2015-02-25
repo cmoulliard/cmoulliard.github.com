@@ -3,17 +3,17 @@ layout: post
 title: "Apache Camel at CamelOne"
 date: 2012-04-13
 categories:
-- FuseSource
+- fuseSource
 - Apache Camel
 - CamelOne
 - Conference
-tags: conference camelone Fuse
+tags: [conference, camelone, fuse]
 comments: true
 share: true
 ---
 
-FuseSource organises for the second time an event dedicated to the famous Apache Camel EIP Framework - [CamelOne](http://camelone2012.eventbrite.com/),
-the 15th &nbsp;and 16nd of May. This conference is not only a vitrine dedicated to Apache Camel&nbsp;Integration framework&nbsp;or FuseSource products&nbsp;but related technologies
+fuseSource organises for the second time an event dedicated to the famous Apache Camel EIP Framework - [CamelOne](http://camelone2012.eventbrite.com/),
+the 15th &nbsp;and 16nd of May. This conference is not only a vitrine dedicated to Apache Camel&nbsp;Integration framework&nbsp;or, fuse]Source products&nbsp;but related technologies
 like ESB, SOA, BPM, Cloud, MOM, HTML5, Big Data and [Real Time applications](http://fusesource.com/apache-camel-conference-2012/camelone_speakers_2012/#cmouillard)
 will be presented through a panel of different [CamelOne talks](http://fusesource.com/apache-camel-conference-2012/camelone_agenda_2012/)
 and [speakers](http://fusesource.com/apache-camel-conference-2012/camelone_speakers_2012/) (Rob Davies, James Strachan, Claus Ibsen,

@@ -2,7 +2,7 @@
 layout: post
 title: "Is Webservice Reliable Messaging (WS-RM) the ugly duck of the WS-* story ?"
 date: 2010-02-26
-tags: apache cxf webservice ws-rm Fuse
+tags: [cxf, webservice, ws-rm, fuse]
 comments: true
 share: true
 ---
@@ -148,7 +148,7 @@ The following trace shows that :
 </soap:header>
 <soap:body></soap:body>
 --------------------------------------24-févr.-2010 9:48:41 org.apache.cxf.interceptor.LoggingInInterceptor loggingINFO: Inbound Message
-----------------------------ID: 2Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Type: text/xml; charset=UTF-8Headers: {content-type=[text/xml; charset=UTF-8], connection=[keep-alive], Host=[localhost:9999], Content-Length=[1006], User-Agent=[Progress FUSE Services Framework 2.2.6-fuse-01-00], Content-Type=[text/xml; charset=UTF-8], Accept=[*/*], Pragma=[no-cache], Cache-Control=[no-cache]}Payload:
+----------------------------ID: 2Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Type: text/xml; charset=UTF-8Headers: {content-type=[text/xml; charset=UTF-8], connection=[keep-alive], Host=[localhost:9999], Content-Length=[1006], User-Agent=[Progress, fuse] Services Framework 2.2.6-fuse-01-00], Content-Type=[text/xml; charset=UTF-8], Accept=[*/*], Pragma=[no-cache], Cache-Control=[no-cache]}Payload:
 <soap:envelope soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:header>
     <action xmlns="http://schemas.xmlsoap.org/ws/2004/08/addressing">http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequenceResponse</action>
@@ -214,7 +214,7 @@ ID: 3Response-Code: 202Encoding: UTF-8Content-Type: text/xml; charset=utf-8Heade
 --------------------------------------
 2010-02-24 09:48:41.937::INFO: seeing JVM BUG(s) - cancelling interestOps==024-févr.-2010 9:48:42 org.apache.cxf.interceptor.LoggingInInterceptor loggingINFO: Inbound Message
 ----------------------------
-ID: 4Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Type: text/xml; charset=UTF-8Headers: {content-type=[text/xml; charset=UTF-8], connection=[keep-alive], Host=[localhost:9999], Content-Length=[1057], User-Agent=[Progress FUSE Services Framework 2.2.6-fuse-01-00], Content-Type=[text/xml; charset=UTF-8], Accept=[*/*], Pragma=[no-cache], Cache-Control=[no-cache]}Payload:
+ID: 4Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Type: text/xml; charset=UTF-8Headers: {content-type=[text/xml; charset=UTF-8], connection=[keep-alive], Host=[localhost:9999], Content-Length=[1057], User-Agent=[Progress, fuse] Services Framework 2.2.6-fuse-01-00], Content-Type=[text/xml; charset=UTF-8], Accept=[*/*], Pragma=[no-cache], Cache-Control=[no-cache]}Payload:
   <soap:envelope soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:header>
       <action xmlns="http://schemas.xmlsoap.org/ws/2004/08/addressing">http://reportincident.example.camel.apache.org/ReportIncidentEndpoint/ReportIncidentResponse</action>
@@ -236,7 +236,7 @@ ID: 4Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Ty
 >>>> Result - code : OK
 24-févr.-2010 9:48:43 org.apache.cxf.interceptor.LoggingInInterceptor loggingINFO: Inbound Message
 ----------------------------
-ID: 5Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Type: text/xml; charset=UTF-8Headers: {content-type=[text/xml; charset=UTF-8], connection=[keep-alive], Host=[localhost:9999], Content-Length=[955], SOAPAction=["http://schemas.xmlsoap.org/ws/2005/02/rm/SequenceAcknowledgement"], User-Agent=[Progress FUSE Services Framework 2.2.6-fuse-01-00], Content-Type=[text/xml; charset=UTF-8], Accept=[*/*], Pragma=[no-cache], Cache-Control=[no-cache]}Payload:
+ID: 5Address: /camel-example/incidentResponse-Code: 200Encoding: UTF-8Content-Type: text/xml; charset=UTF-8Headers: {content-type=[text/xml; charset=UTF-8], connection=[keep-alive], Host=[localhost:9999], Content-Length=[955], SOAPAction=["http://schemas.xmlsoap.org/ws/2005/02/rm/SequenceAcknowledgement"], User-Agent=[Progress, fuse] Services Framework 2.2.6-fuse-01-00], Content-Type=[text/xml; charset=UTF-8], Accept=[*/*], Pragma=[no-cache], Cache-Control=[no-cache]}Payload:
   <soap:envelope soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:header>
       <action xmlns="http://schemas.xmlsoap.org/ws/2004/08/addressing">http://schemas.xmlsoap.org/ws/2005/02/rm/SequenceAcknowledgement</action>

@@ -3,7 +3,7 @@ layout: post
 title: "Trick to pass an uri declared in a property file to a Camel route"
 date: 2009-05-05
 share: true
-tags: Spring-framework OSGi Apache Camel Fuse
+tags: [spring-framework, osgi, camel, fuse]
 comments: true
 share: true
 ---

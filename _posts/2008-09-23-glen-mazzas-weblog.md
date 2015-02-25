@@ -2,7 +2,7 @@
 layout: post
 title: "Charles Moulliard's Weblog"
 date: 2008-09-23
-tags: apache cxf wsdl Fuse
+tags: [cxf, wsdl, fuse]
 comments: true
 share: true
 ---

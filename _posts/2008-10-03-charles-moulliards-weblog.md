@@ -2,7 +2,7 @@
 layout: post
 title: "Charles Moulliard's Weblog"
 date: 2008-10-03
-tags: Fuse
+tags: [fuse]
 comments: true
 share: true
 ---

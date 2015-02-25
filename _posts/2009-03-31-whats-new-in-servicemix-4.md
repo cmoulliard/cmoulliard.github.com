@@ -2,7 +2,7 @@
 layout: post
 title: "What's new in ServiceMix 4"
 date: 2009-03-31
-tags: Apache ServiceMix News Fuse
+tags: [servicemix, news, fuse]
 comments: true
 share: true
 ---

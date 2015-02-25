@@ -5,7 +5,7 @@ date: 2009-11-02
 comments: true
 categories:
  - camel osgi tutorial
-tags: Tutorial Apache Karaf Camel Fuse
+tags: [tutorial, karaf, camel, fuse]
 share: true
 ---
 
