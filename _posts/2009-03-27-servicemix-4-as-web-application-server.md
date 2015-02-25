@@ -7,7 +7,8 @@ categories:
 - SMX4
 - Web Application Server
 - ServiceMix
-tags: ServiceMix, Web Container, Fuse
+tags: Apache ServiceMix Web Container Fuse
+comments: true
 share: true
 ---
 

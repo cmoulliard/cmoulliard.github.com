@@ -2,12 +2,12 @@
 layout: post
 title: "How to share connection pool - OSGI- SMX4"
 date: 2009-03-11
-comments: true
 categories:
 - SMX4
 - OSGI
 - ServiceMix
-tags: SMX4, OSGI, ServiceMix, Fuse
+tags: Apache SMX4 OSGi ServiceMix Fuse
+comments: true
 share: true
 ---
 

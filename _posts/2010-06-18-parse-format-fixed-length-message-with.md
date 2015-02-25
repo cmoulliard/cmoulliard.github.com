@@ -2,13 +2,13 @@
 layout: post
 title: "Parse / Format fixed length message with camel-bindy"
 date: 2010-06-18
-comments: true
 categories:
 - fixed length
 - Camel
 - camel-bindy
 - Apache
-tags: apache camel, bindy, dataformat, Fuse
+tags: apache camel bindy dataformat Fuse
+comments: true
 share: true
 ---
 

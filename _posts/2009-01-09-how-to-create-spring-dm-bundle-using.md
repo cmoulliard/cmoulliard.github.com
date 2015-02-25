@@ -2,12 +2,12 @@
 layout: post
 title: "How to create OSGI bundles using PAX scripts"
 date: 2009-01-09
-comments: true
 categories:
 - PAX
 - Spring DM
 - OSGI
-tags: PAx, Spring DM, OSGI,  Fuse
+tags: Pax Spring-DM OSGi Fuse
+comments: true
 share: true
 ---
 

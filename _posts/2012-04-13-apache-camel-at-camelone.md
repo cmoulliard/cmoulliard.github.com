@@ -2,13 +2,13 @@
 layout: post
 title: "Apache Camel at CamelOne"
 date: 2012-04-13
-comments: true
 categories:
 - FuseSource
 - Apache Camel
 - CamelOne
 - Conference
-tags: conference, camelone, Fuse
+tags: conference camelone Fuse
+comments: true
 share: true
 ---
 

@@ -2,7 +2,6 @@
 layout: post
 title: "Run a Google Web Toolkit 2 project on Apache Karaf/ServiceMix"
 date: 2011-12-16
-comments: true
 categories:
 - WAB
 - Karaf
@@ -11,7 +10,8 @@ categories:
 - WAR
 - Apache
 - ServiceMix
-tags: google gwt, PAx-web, OSGI, WAR, ServiceMix, Fuse
+tags: google gwt Pax-web OSGi ServiceMix Fuse
+comments: true
 share: true
 ---
 

@@ -2,7 +2,6 @@
 layout: post
 title: "3 reasons to use FuseSource Documentation"
 date: 2012-04-13
-comments: true
 categories:
 - FuseSource
 - Camel
@@ -10,7 +9,8 @@ categories:
 - Apache
 - ServiceMix
 - Documentation
-tags: documentation, fusesource, Fuse
+tags: documentation fusesource Fuse
+comments: true
 share: true
 ---
 

@@ -6,8 +6,8 @@ image:
   feature: croatia-2.png
   credit: Charles Moulliard
   creditlink: cmoulliard.github.io
+tags: integration apache camel Fuse
 comments: true
-tags: integration, apache camel, Fuse
 share: true
 ---
 

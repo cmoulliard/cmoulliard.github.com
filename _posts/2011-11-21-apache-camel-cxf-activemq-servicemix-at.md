@@ -2,7 +2,7 @@
 layout: post
 title: "Apache Camel, Cxf, ActiveMQ & ServiceMix at Devoxx"
 date: 2011-11-21
-tags: apache camel, cxf, servicemix, devoxx, Fuse
+tags: apache camel cxf servicemix devoxx Fuse
 comments: true
 share: true
 ---

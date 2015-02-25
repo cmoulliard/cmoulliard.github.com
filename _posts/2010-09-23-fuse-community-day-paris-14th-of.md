@@ -2,7 +2,7 @@
 layout: post
 title: "Fuse Community Day - Paris - 14th of October"
 date: 2010-09-23
-tags: fuse community days, Fuse
+tags: fuse-community-days Fuse
 comments: true
 share: true
 ---

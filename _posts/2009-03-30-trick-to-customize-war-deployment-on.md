@@ -2,12 +2,12 @@
 layout: post
 title: "Trick to customize war deployment  on ServiceMix4 using PAX"
 date: 2009-03-30
-comments: true
 categories:
 - PAX
 - WAR
 - ServiceMix
-tags: ServiceMix, Pax Web, WAR, Fuse
+tags: Apache ServiceMix Pax-Web Fuse
+comments: true
 share: true
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Is Webservice Reliable Messaging (WS-RM) the ugly duck of the WS-* story ?"
 date: 2010-02-26
+tags: apache cxf webservice ws-rm Fuse
 comments: true
-tags: apache cxf, webservice, ws-rm, Fuse
 share: true
 ---
 

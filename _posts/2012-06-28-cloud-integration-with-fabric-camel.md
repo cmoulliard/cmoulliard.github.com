@@ -6,7 +6,7 @@ categories:
  - Fuse Fabric
  - Cloud
  - Apache Camel
-tags: cloud, fabric, Fuse
+tags: cloud fabric8 integration middleware Fuse
 image:
   feature: croatia-4.png
   credit: Charles Moulliard

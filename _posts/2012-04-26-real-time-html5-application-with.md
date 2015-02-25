@@ -6,7 +6,8 @@ comments: true
 categories:
 - WebSocket
 - Integration
-tags: html5, websocket, real-time, camel, activemq
+tags: html5 websocket real-time camel activemq
+comment: true
 share: true
 ---
 

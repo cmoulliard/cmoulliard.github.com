@@ -2,7 +2,6 @@
 layout: post
 title: "Can Apache Camel be independent of the queuing engine ?"
 date: 2009-03-17
-comments: true
 categories:
 - JMS
 - Queue
@@ -10,7 +9,8 @@ categories:
 - OSGI
 - Apache
 - ServiceMix
-tags: Camel, JMS, ServiceMix, Fuse
+tags: Apache Camel JMS ServiceMix Fuse
+comments: true
 share: true
 ---
 
