@@ -5,7 +5,7 @@ title: About me
 tags: Fuse Evangelist Integration
 ---
 
-Charles Moulliard is currently a Sr. Principal Solution Architect @RedHat and Apache Committer with more than 19 years of
+Charles Moulliard is currently a Sr. Principal Solution Architect @RedHat & Apache Committer with more than 20 years of
 expertise in solutions design based on JEE / Middleware technologies.
 
 As Engineer & Architect, he has been involved in system integration of projects in Financial and Banking world.
