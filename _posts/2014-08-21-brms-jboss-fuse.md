@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BRMS runs on OSGI container JBoss, fuse] !"
+title: "Drools & jBPM run on OSGi container JBoss Fuse !"
 date: 2014-08-22
 tags: [camel, drools, bpm, rules, integration, fuse]
 comments: true
