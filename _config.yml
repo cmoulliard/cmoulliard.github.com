@@ -5,7 +5,7 @@ description:      Apache PMC&Committer, Java Integration Geek, (Web)Technology a
 logo:             camel.jpg
 disqus_shortname: cmoulliard
 #Comment out url when working locally to resolve base urls correctly
-#url:              http://cmoulliard.github.io
+# url:              http://cmoulliard.github.io
 
 display_content: false
 
@@ -91,4 +91,4 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 #
 # Gems required
 #
-gems: []
+gems: ['jekyll-less']
