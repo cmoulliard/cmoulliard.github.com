@@ -3408,10 +3408,10 @@ body {
   }
 }
 /*************************
- * Mar 03 2015, CHM : Change max-width from 640 to 740px
+ * Mar 03 2015, CHM : Change max-width from 640 to 780px
  *************************/
 .entry-header {
-  max-width: 740px;
+  max-width: 780px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -3551,7 +3551,7 @@ span + .entry-title {
   }
 }
 .entry-content {
-  max-width: 740px;
+  max-width: 780px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
