@@ -39,6 +39,8 @@ You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cm
   * [Development of Social Network Projects with Camel](https://github.com/cmoulliard/devnation-2014-demos, http://goo.gl/PVjSdF) 
 - [ICTexpo 2014 @Easyfairs - Helsinki](http://www.easyfairs.com/events_216/ictexpo-helsinki2014_45506/ictexpo-helsinki-2014_45507/)
   * Agile application integration with open source 
+- [DevNation 2015 - Boston](http://www.devnation.org/#f127f9391dd047dd8bd8458080cea8b7)
+  * Continuous Delivery with RedHat Jboss Fuse on Openshift Enterprise by RedHat
 
 ## Publications
 
