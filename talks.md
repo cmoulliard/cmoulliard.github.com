@@ -101,3 +101,30 @@ SOA & Integration architectures have been designed for a while around central mo
 
 The goal of this talk is to review the strengths and weaknesses of the "Microservice & microcontainer" architectures/patterns but also to present a "real" use case designed using the Fuse Fabric8 technology with the container Docker, the integration framework Apache Camel, the Fabric8 Gateway (HTTP) and the event message MQTT protocol of Apache ActiveMQ.
 
+*****************************************************
+
+## How Apache Camel technology can simplify your Integration Project Development
+
+## Abstract : 
+
+The Java Integration Framework - Apache Camel  has proven since many years that it is one of the core technology to design java integration projects and a de facto standard to resolve complex enterprise issues using integration patterns : splitter, aggregator, content based router.
+
+The goal of this talk is present and demonstrate how Apache Camel can simplify such Integration Project Development where we have to expose a service and consume it. For the purpose of the talk, we will use a REST endpoint, its DSL language combined with the Netty component to expose the service.
+
+The service will be documented using the Swagger API and we will explain how we can collect the metrics. The service created will be compiled, tested and deployed using a continuous delivery strategy.
+
+The talk contains slides and a demo.
+
+*****************************************************
+
+## Continuous Delivery & Integration with Fabric8 on Cloud platform
+
+## Abstract : 
+
+The cost of a change within an IT project impacts all the departments and specifically the integration projects where we have to link many differents systems, play with different protocols and formats. This why a DevOps strategy to manage this change, as to deliver the modifications from the development to the production environement is critical to guarantee the success/profitability of a project and to simplify the maintenance process too. Such strategy will naturaly support a more agile development model, reduce the costs and will allow new business requirements to be adopted more frequently.
+
+To sustain this vision and architecture paradigm the opensource Fabric8 project has developed some continuous delivery tools (Maven Plugin, API) around the Docker container & Google Kubernetes API to manage the required applications part of the DevOps strategy : Jenkins Jobs & DSL, Gerrit for code review, Gogs / Gitlab to host the git repositories and Nexus to manage the artifacts.
+
+In this session, we'll present and demystify the technology used and we will demonstrate based on a simple integration project (Apache Camel REST service), how we could manage it from dev to integration by adopting the DevOps principe and by deploying using the Fabric8 tools the required applications.
+
+
