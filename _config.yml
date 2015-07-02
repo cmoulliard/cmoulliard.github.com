@@ -91,4 +91,4 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 #
 # Gems required
 #
-gems: ['jekyll-less']
+# gems: ['jekyll-less','jekyll-sitemap']
