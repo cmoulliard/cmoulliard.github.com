@@ -115,6 +115,14 @@ The service will be documented using the Swagger API and we will explain how we 
 
 The talk contains slides and a demo.
 
+OR
+
+The Java Integration Framework - Apache Camel  has proven since many years that it is one of the key technology to design easily and quickly java integration projects and a de facto standard to resolve complex enterprise use cases using integration patterns like the splitter, aggregator, content based router, dynamic router and so on.
+
+The goal of this talk is to present and demonstrate how Apache Camel Technology part of the JBoss Fuse product can simplify such Integration Project Development (functional & technical design), reduce the design & development costs by adopting a modular & microservice architecture model and accelerate the deployment process by implementing a continuous delivery strategy as proposed by JBoss Fabric & Openshift Technologies
+
+Remark : This abstract content is still under development.
+
 *****************************************************
 
 ## Continuous Delivery & Integration with Fabric8 on Cloud platform
@@ -127,4 +135,10 @@ To sustain this vision and architecture paradigm the opensource Fabric8 project 
 
 In this session, we’ll present and demystify the technology used and we will demonstrate based on a simple integration project (Apache Camel REST service), how we could manage it from dev to integration by adopting the DevOps Principe and by deploying using the Fabric8 tools the required applications top of the Openshift V3 platform.
 
+******************************************************
 
+## JBoss Fuse in Action - 2-3 Hours lab
+   
+## Abstract :
+
+This lab will cover JBoss Fuse 6.2 technology in action. The students will design a REST service using the new Camel REST DSL language within JBDS 8, run the project into JBDS studio & debug it. The camel project developed will some common patterns (Content Based Router, Request/Reply, ...) like a Data Transformation (json2json or json2xml) using the new DataMapper Tool. The project created will be tested locally by implementing a A JUnit Test Case and next packaged as a Fabric profile in order to deploy it later on. The REST service will be documented using the Swagger API (which is supported by Fuse) and deployed in a new Fuse Managed container using the Fabric profile created. We will deploy the same service in 2 containers to demonstrate that requests could be loadbalanced.  In an additional step, the REST service will be secured using Apiman & Keycload using Oauth2.  We will see also how we could collect the camel metrics & usage about the service (using Fabric Insight technology & also ApiMan Statistics).
