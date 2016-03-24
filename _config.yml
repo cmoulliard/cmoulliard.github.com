@@ -59,7 +59,7 @@ timezone:    Europe/Brussels
 # Allow to post blog in the future
 future:      true
 # Support pygmentize
-highlighter: pygments
+highlighter: rouge
 # Rendering tool (rdiscount could also be used)
 markdown:    kramdown
 
