@@ -17,7 +17,7 @@ The syntax exists in Java or in XML format. Here is a an example where the path 
 the subpath "/article". A parameter has been added using as convention the syntax "{id}". The format to be used when the HTTP endpoint produce an HTTP Response or process a HTTP request
 can be specified as you can see using "produces("")" or "consumes("").
 
-```
+{% highlight java %}
 rest("/blog/").id("rest-blog-service")
        .produces("application/json")
        .consumes("application/json")
@@ -25,7 +25,7 @@ rest("/blog/").id("rest-blog-service")
        .put("/article/{id}").id("rest-put-article")
        .type(Blog.class)
        .to("direct:add");
-```
+{% endhighlight %}
 
 The formal descritpion of the REST DSL language is designed [here](http://camel.apache.org/rest-dsl.html) 
 
