@@ -41,6 +41,9 @@ You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cm
   * Agile application integration with open source 
 - [DevNation 2015 - Boston](http://www.devnation.org/#f127f9391dd047dd8bd8458080cea8b7)
   * Continuous Delivery with RedHat Jboss Fuse on Openshift Enterprise by RedHat
+- [Snwocamp 2016 - Grenoble](http://snowcamp.io)
+  * [Développer une application mobile connectée à un système backend](http://snowcamp2016.sched.org/event/5meC/developper-une-application-mobile-connectee-a-un-systeme-backend?iframe=yes&w=&sidebar=yes&bg=no#?iframe=yes&w=&sidebar=yes&bg=no)
+  * [Design a MicroService application using Apache Camel technology](http://snowcamp2016.sched.org/event/5nBL/design-a-rest-microservice-using-apache-camel-technology?iframe=yes&w=&sidebar=yes&bg=no)
 
 ## Publications
 
