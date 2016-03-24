@@ -115,13 +115,11 @@ The service will be documented using the Swagger API and we will explain how we 
 
 The talk contains slides and a demo.
 
-OR
+## How Red Hat Middleware Technology Can Simplify Your Integration Project Development
+   
+The Java Integration Framework - Apache Camel has proven since many years that it is one of the key technology to design easily and quickly java integration projects and a de facto standard to resolve complex enterprise use cases using integration patterns like the splitter, aggregator, content based router, dynamic router and so on.
 
-The Java Integration Framework - Apache Camel  has proven since many years that it is one of the key technology to design easily and quickly java integration projects and a de facto standard to resolve complex enterprise use cases using integration patterns like the splitter, aggregator, content based router, dynamic router and so on.
-
-The goal of this talk is to present and demonstrate how Apache Camel Technology part of the JBoss Fuse product can simplify such Integration Project Development (functional & technical design), reduce the design & development costs by adopting a modular & microservice architecture model and accelerate the deployment process by implementing a continuous delivery strategy as proposed by JBoss Fabric & Openshift Technologies
-
-Remark : This abstract content is still under development.
+The goal of this talk is to present and demonstrate how Apache Camel Technology part of the JBoss Fuse product can simplify such Integration Project Development (functional & technical design), reduce the design & development costs by adopting a modular & microservice architecture model and accelerate the deployment process by implementing a continuous delivery strategy as proposed by JBoss Fabric & Openshift Technologies.
 
 *****************************************************
 
