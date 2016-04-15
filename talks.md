@@ -140,3 +140,19 @@ In this session, we’ll present and demystify the technology used and we will d
 ## Abstract :
 
 This lab will cover JBoss Fuse 6.2 technology in action. The students will design a REST service using the new Camel REST DSL language within JBDS 8, run the project into JBDS studio & debug it. The camel project developed will some common patterns (Content Based Router, Request/Reply, ...) like a Data Transformation (json2json or json2xml) using the new DataMapper Tool. The project created will be tested locally by implementing a A JUnit Test Case and next packaged as a Fabric profile in order to deploy it later on. The REST service will be documented using the Swagger API (which is supported by Fuse) and deployed in a new Fuse Managed container using the Fabric profile created. We will deploy the same service in 2 containers to demonstrate that requests could be loadbalanced.  In an additional step, the REST service will be secured using Apiman & Keycload using Oauth2.  We will see also how we could collect the camel metrics & usage about the service (using Fabric Insight technology & also ApiMan Statistics).
+
+*****************************************************
+
+## Security Enforcement of the Java MicroService Applications
+
+## Abstract :
+
+The Security around the Java Web Services, RESTfull endpoints exposing the Services accessed by the clients are critical in many business applications. Although many technologies/specifications exist currently and can be implemented like WS-Security, WS-SecurityPolicy, 
+WS-Trust, WS-Federation, SAML & Oauth2 to secure the endpoints, they require strong Security skills from the Java developers and unfortunately this approach doesn't fit very well in a MicroService architecture running potentially hundred of endpoints and where we have to manage also hundreds of certificates.
+During this talk, you will see and discover how you can leverage the advantages to use an API Management platform to enforce the security of your REST endpoints and externalize such management process. We will also discover how we can deploy the Swagger REST documented endpoint within a catalog, define the security of the endpoints and the policies to be applied.
+This security enforcement will be designed using some of the policies available to authenticate or authorize the MicroService Application running in a Linux Container using Basic Auth, Oauth2 and Roles. This talk contains slides and demos.
+
+La sécurité des Web Services ou endpoints de type RESTfull qui exposent des services consommés par des clients sont critiques pour les applications métier. Bien que de nombreuses technologies et specifications existent et peuvent être implémentées comme WS-Security, WS-SecurityPolicy, WS-Trust, SAML ou Oauth2 pour sécuriser les endpoints, celles-ci requièrent de fortes compétences
+ de la part des codeurs Java et malheureusement, elles ne peuvent pas être facilement mises en chantier dans une architecture de type microservice qui potentiellement contient des centaines de endpoints voir autant de certificats/clés pour les clients connectés. Durant cette conférence, nous allons vous montrer comment on peut tirer partie d'une plateforme de type Api Management & Gateway
+  afin de renforcer la sécurité des endpoints de type RESTfull. Vous allez également voir comment on peut utiliser les endpoints REST documentés avec l'API Swagger afin de populer un registre Catalogue, les sécuriser avec l'une des polices existantes (Basic HTTP, OAuth2, Basé sur un rôle) et au final sécuriser le endpoint exposé par un containeur Linux.
+Cette conférence contient des slides et une démo.
