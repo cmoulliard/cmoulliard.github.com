@@ -156,3 +156,11 @@ La sécurité des Web Services ou endpoints de type RESTfull qui exposent des se
  de la part des codeurs Java et malheureusement, elles ne peuvent pas être facilement mises en chantier dans une architecture de type microservice qui potentiellement contient des centaines de endpoints voir autant de certificats/clés pour les clients connectés. Durant cette conférence, nous allons vous montrer comment on peut tirer partie d'une plateforme de type Api Management & Gateway
   afin de renforcer la sécurité des endpoints de type RESTfull. Vous allez également voir comment on peut utiliser les endpoints REST documentés avec l'API Swagger afin de populer un registre Catalogue, les sécuriser avec l'une des polices existantes (Basic HTTP, OAuth2, Basé sur un rôle) et au final sécuriser le endpoint exposé par un containeur Linux.
 Cette conférence contient des slides et une démo.
+
+****************************************************************************
+
+## Develop a Mobile Application connected to a REST Microservice
+
+## Abstract
+
+The development of a Mobile Aplication has been donimated during a decade by proprietary technologies developed by Apple, Android & Microsoft for their own mobile brand. With the development of the Apache Cordova Platform and the framework Ionic, this situation has completely changed as a developer can now design a project using their favorite HTML5, Javascript, AngularJS frameworks and rely on the tool provided by Apache Codova to generate the HTML Hybrid code for the target platform. The purpose of this talk is to demonstrate how such Mobile project can be designed and being integrated with a Backend System which is a REST Camel microservice. Next, we will also explain how we can simplify the Management and the packaging of the NodeJS application used to access the backend service using the Feedhenry Mobile Application platform and its Api.
