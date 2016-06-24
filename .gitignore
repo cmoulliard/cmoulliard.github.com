@@ -8,7 +8,10 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+.ruby-version
 
 Gemfile.lock
 
 .idea/
+Guardfile.bk
+Guardfile
