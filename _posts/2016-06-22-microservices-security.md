@@ -137,7 +137,7 @@ sh.setLoginService(loginService);
 
 As you can see within the next diagram, the security architecture proposed is more robust as managed by two distinct levels if you combine the Interceptor pattern with the HTTP Security model :
 
-- The Web HTTP Container will be responsible to Authenticate the user and restrict the access to the Web Resoruces,
+- The Web HTTP Container will be responsible to Authenticate the user and restrict the access to the Web Resources,
 - The Connection between the HTTP agent and the Server is more secured as the data will be encrypted and the confidentiality of the data exchanged will be guarantee
 - The interceptor will become responsible to authorize the access to the Service
 
@@ -145,7 +145,14 @@ As you can see within the next diagram, the security architecture proposed is mo
 
 ## Time to mitigate the approach
 
+It is time now to review the approach from a Security Officer point of view and to mitigate the approach. He/She will be very please about the solution
+as :
 
+- It offers a great level of flexibility to support the Java Standards (JAAS, WS-Security, ...) or enacted by the company,
+- The applications developed will be independent of any third party tool or vendor to support the security,
+- But it will certainly complain that the approach is really intrusive, will require to develop some home security code to support the interceptor pattern.
+- The management of the collection of the Microservices will be very difficult as we will suffer from a lack of governance & centralized capability as proposed
+  by an Api Management platform to define in one place the security rules applied to the different services, the services secured, ...
 
 <table class="pure-table pure-table-bordered">
     <thead>
@@ -172,7 +179,85 @@ As you can see within the next diagram, the security architecture proposed is mo
 
 ## Gateway
 
+The gateway pattern as depicted within the next diagram delegates the responsibility to manage the security aspect to an external player
+which is an interceptor acting as a proxy. This actor which is an Api Management Actor can be part of the same network segment where the Microservices 
+are deployed or can be deployed behind a firewall to reenforce the security of the Services hosted by the Java containers.
+
 ![interceptor-jetty]({{ site.url }}/images/security/rest-3.png)
 
+The [Apiman](http://apiman.io) project has been developed to support this pattern and has the advantage that it can be deployed on premises. The role of the Api Management
+platform will be to :
 
+- Define centrally the different services/endpoints to be secured (REST, Web Service),
+- Select using the available plugins the Policies to be applied (Basic Auth, OAuth2, ...), 
+- Map the Web Resources, the Web Actions (GET, POST, PUT, DELETE) with the Services 
+- Deploy within one to many Gateways (HTTP Web Server, Vert.x) the policies that the Server will use to intercept the HTTP requests
 
+The management of the services and the governance is simplified for the Security officer using the Apiman Server. 
+
+![apiman-1]({{ site.url }}/images/security/apiman-1.png)
+
+This Web Console will allow to :
+
+- Manage the services according to an organization which abstract the related services,
+- Select the services to be secured and assign to an Api,
+- To group using a plan the policies to be applied to the different services,
+- To select the plugins to be used; Basic Authentication, Authorization, Black listed IP, White IP list, Throttle, Keycloak - OAuth2
+- To manage the different versions of the Apis published,
+- To integrate the gateway where the policies are applied top of the requests received,
+- To collect the metrics/statistics of the usage done
+
+![apiman-2]({{ site.url }}/images/security/apiman-2.png)
+
+## Conclusions
+
+The adoption of an Api Management Platform will certainly offer more possibilities to govern the Microservices deployed in different Java containers
+and potentially non Java containers as offered by the Node.js technology.
+
+Some additional benefits about this technology concern also :
+
+- The disappearance of the coopling between the Services and the frameworks required to authenticate/authorize the access to the Microservices, 
+- The centralization in one place of the Apis, consumers of the services,
+- The collection/aggregation of the metrics/statistics about the usage of the services which is required within some institutions where Security Audit are performed regularly
+
+There are nevertheless some drawbacks as summarized within the next table as a new technology must be investigated and adopted within the company, the performance could be impacted as a Proxy HTTP Server will interrupt the normal flow between
+the HTTP Agent and the Service, the project will become dependent of the Api Product used and new processes will be defined within the company to support the Api platform like also the actors in charge to maintain the 
+security governance and the infrastructure.
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Pros</th>
+            <th>Cons</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Centralized governance policy configuration</td>
+            <td>Performance</td>
+        </tr>
+        <tr>
+            <td>Loose coupling</td>
+            <td>New Architecture Brick</td>
+       </tr>
+        <tr>
+            <td>Tracking of APIs and consumers of those APIs</td>
+            <td>Plugins available</td>
+        </tr>
+        <tr>
+            <td>Gathering statistics/metrics</td>
+            <td>Product locked</td>
+        </tr>
+        <tr>
+            <td>Simplify security audit</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+While the usage of the Interceptor completed with the Web Container Security Model will be adopted by many companies when the number of the Microservices to secure is not important
+or when few security standards should be supported, it is evident that the Gateway Pattern will become the defacto standard within large institutions where the security audit and the governance
+aspects are non negotiable.
+
+Another benefit of the Api Management Platform when it is used top of a Virtualized environment as proposed by the OpenShift/Kubernetes Cloud platform is the fact that the MicroServices deployed
+and running as Pod will be automatically discovered !
