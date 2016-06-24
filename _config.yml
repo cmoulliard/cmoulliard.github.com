@@ -5,7 +5,7 @@ description:      Apache PMC&Committer, Java Integration Geek, (Web)Technology a
 logo:             camel.jpg
 disqus_shortname: cmoulliard
 #Comment out url when working locally to resolve base urls correctly
-url:              http://cmoulliard.github.io
+#url:              http://cmoulliard.github.io
 
 display_content: false
 
@@ -59,7 +59,9 @@ timezone:    Europe/Brussels
 # Allow to post blog in the future
 future:      true
 # Support pygmentize
-highlighter: rouge
+# highlighter: rouge
+highlighter: pygmentize
+
 # Rendering tool (rdiscount could also be used)
 markdown:    kramdown
 
@@ -75,7 +77,8 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  # use_coderay: false
+  enable_coderay: false
 
  # Syntax highlighting with markdown
   coderay:
