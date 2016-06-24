@@ -151,9 +151,10 @@ as :
 
 - It offers a great level of flexibility to support the Java Standards (JAAS, WS-Security, ...) or enacted by the company,
 - The applications developed will be independent of any third party tool or vendor to support the security,
-- But it will certainly complain that the approach is really intrusive, will require to develop some home security code to support the interceptor pattern.
-- The management of the collection of the Microservices will be very difficult as we will suffer from a lack of governance & centralized capability as proposed
-  by an Api Management platform to define in one place the security rules applied to the different services, the services secured, ...
+
+But it will certainly complain that the approach is really intrusive, will require to develop some home security code to support the interceptor pattern.
+The management of the collection of the Microservices will be very difficult as we will suffer from a lack of governance & centralized capability as proposed
+by an Api Management platform to define in one place the security rules applied to the different services, the services secured, ...
 
 <table class="pure-table pure-table-bordered">
     <thead>
