@@ -66,23 +66,22 @@ public class SimpleAuthenticationPolicy implements AuthorizationPolicy {
 }
 {% endhighlight %}
 
-The +SimpleAuthenticationProcessor+ class contains the logic needed to access tjhe content of the Exchange when the processor will be called and of course, it will call the class responsible 
-to authenticate ot authorize the incoming request ++
+The +SimpleAuthenticationProcessor+ class contains the logic needed to access the content of the Exchange when the processor will be called and of course, it will call the class/method responsible 
+to authenticate ot authorize the incoming request +applySecurityPolicy+
 
 {% highlight java %}
-    @Override
-    public boolean process(Exchange exchange, AsyncCallback callback) {
-        try {
-            applySecurityPolicy(exchange);
-        } catch (Exception e) {
-            // exception occurred so break out
-            exchange.setException(e);
-            callback.done(true);
-            return true;
-        }
-
-        return super.process(exchange, callback);
+@Override
+public boolean process(Exchange exchange, AsyncCallback callback) {
+    try {
+        applySecurityPolicy(exchange);
+    } catch (Exception e) {
+        // exception occurred so break out
+        exchange.setException(e);
+        callback.done(true);
+        return true;
     }
+    return super.process(exchange, callback);
+}
 {% endhighlight %}
 
 
