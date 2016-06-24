@@ -23,7 +23,7 @@ The difficulty is not related to the Microservice Architecture itself but becaus
 - The information transported between the services belong to a different confidentiality level (public, private, ...)
 
 For all these reasons, the security and the governance will become even more critical for the success of a Microservice Architecture. 
-From a technical point of view, we will be faced to the following concern; as the modules will be deployed within different type of Java Container (Apache Tomcat, JBoss WildFly, Apache Karaf, JBoss Swarm, Vert.x, ...)
+From a technical point of view, we will be faced to the following concerns : as the modules will be deployed within different type of Java Container (Apache Tomcat, JBoss WildFly, Apache Karaf, JBoss Swarm, Vert.x, ...)
 , that each container addresses a specific need (Non Blocking, high throughput of connections, http/2 protocol, ...) and that they doesn't necessarily support/follow the JavaEE spec or JAXRS/JAXWS standards,
 different security patterns or frameworks will be required to resolve our security challenge.
 
@@ -35,6 +35,7 @@ easily implement within your project in order to secure your Microservices :
 - Api Gateway
 
 We will now present, detail and mitigate the approaches in order to measure the consequences of the adoption of the different patterns. 
+
 The use case that we will discuss is very simple and consists to secure a RESTfull Service which has been created using the Java Integration Framework - Apache Camel.
 As we can see within the following picture, the REST Service or Endpoint is exposed by a local HTTP Web container created using Eclipse Jetty.
 A client which is our HTTP Agent will issue HTTP requests using a HTTP method (GET, POST, DELETE, ...) and a URL to access the Web resources of the service ("/rest/myservice/").
