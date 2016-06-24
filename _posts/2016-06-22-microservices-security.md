@@ -28,14 +28,14 @@ From a technical point of view, we will be faced to the following concern; as th
 different security patterns or frameworks will be required to resolve our security challenge.
 
 To help the architects and developers to adopt the security approach which best fits the company requirements, practices, Microservices Architecture and their skills, we will investigate within this blog some patterns that you could
-easily implement within your project :
+easily implement within your project in order to secure your Microservices :
 
 - Interceptor
 - Web Container
 - Api Gateway
 
 We will now present, detail and mitigate the approaches in order to measure the consequences of the adoption of the different patterns. 
-The use case that we will discuss is very simple and consists to secure a RESTfull Service with has been created using the Java Integration Framework - Apache Camel.
+The use case that we will discuss is very simple and consists to secure a RESTfull Service which has been created using the Java Integration Framework - Apache Camel.
 As we can see within the following picture, the REST Service or Endpoint is exposed by a local HTTP Web container created using Eclipse Jetty.
 A client which is our HTTP Agent will issue HTTP requests using a HTTP method (GET, POST, DELETE, ...) and a URL to access the Web resources of the service ("/rest/myservice/").
 
