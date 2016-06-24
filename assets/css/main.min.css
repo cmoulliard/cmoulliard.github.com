@@ -50,6 +50,12 @@ sub {
 blockquote {
   margin: 0;
 }
+
+img[alt="camel-intercept"] {
+  max-width:  500px;
+  display: block;
+}
+
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
   max-width: 100%;
