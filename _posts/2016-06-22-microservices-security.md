@@ -49,12 +49,12 @@ and the credentials provided by the HTTP agent. The principe is presented within
 ![camel-intercept]({{ site.url }}/images/security/interceptor.png)
 
 Within the flow describing how a request or an exchange is processed, an interceptor is added before or after the call to the processor responsible to handle the logic declared within the application. This 
-interceptor wraps your code and will act as a security guardian. This pattern is supported by the Apache Camel Framework and Apache CXF using respectively a [Policy](https://camel.apache.org/maven/camel-2.15.0/camel-core/apidocs/org/apache/camel/spi/Policy.html) and [In/OutInterceptor](http://cxf.apache.org/docs/interceptors.html).
+interceptor wraps your code and will act as a security guardian. This pattern is supported by the Apache Camel Framework and Apache CXF using respectively a [Policy](https://camel.apache.org/maven/camel-2.15.0/camel-core/apidocs/org/apache/camel/spi/Policy.html).
 
-The interceptor can use existing Frameworks/Technologies to handle the authentication/authorization process (JAAS, apache Shiro, Spring Security, Apache WS4J, ...) but you can also create your own Interceptor and plug it within the 
-flow.
+The interceptor can use the existing Security Frameworks/Technologies to handle the authentication/authorization process like JAAS, Apache Shiro, Spring Security, Apache WS4J, ...) but you can also create your own Interceptor and plug it within the 
+flow as we will demonstrate hereafter.
 
-An Apache Camel interceptor will look this code where the wrap method will be called when the framework will consume an Exchange which corresponds to a HTTP Request received by the Jetty Server acting as a consumer.
+An Apache Camel interceptor will look the **SimpleAuthenticationPolicy** class where the wrap method will be called when the framework will consume an Exchange which corresponds to a HTTP Request received by the Jetty Server acting as a consumer.
  
 {% highlight java %}
 public class SimpleAuthenticationPolicy implements AuthorizationPolicy {
@@ -66,8 +66,8 @@ public class SimpleAuthenticationPolicy implements AuthorizationPolicy {
 }
 {% endhighlight %}
 
-The +SimpleAuthenticationProcessor+ class contains the logic needed to access the content of the Exchange when the processor will be called and of course, it will call the class/method responsible 
-to authenticate ot authorize the incoming request +applySecurityPolicy+
+The **SimpleAuthenticationProcessor** class contains the logic needed to access the content of the Exchange when the processor will be called and of course, it will call the class/method responsible 
+to authenticate ot authorize the incoming request **applySecurityPolicy**
 
 {% highlight java %}
 @Override
@@ -83,5 +83,78 @@ public boolean process(Exchange exchange, AsyncCallback callback) {
     return super.process(exchange, callback);
 }
 {% endhighlight %}
+
+The last thing to be done is to register the interceptor within the Apache Camel Route definition in order to secure your Microservice.
+
+{% highlight java %}
+  SimpleAuthenticationPolicy auth = new SimpleAuthenticationPolicy();
+  
+  // Definition of the RESTFull Endpoint using the REST DSL syntax
+  restConfiguration()
+      .component("jetty").scheme("http").host("0.0.0.0").port("9090")
+      .bindingMode(RestBindingMode.json);
+
+      // Service exposed at the path "/customerservice/customer/{id}
+      rest("/customerservice").produces("json")
+         .get("/customer/{id}")
+         .to("direct:hello");
+
+      from("direct:hello")
+         .policy(auth) // Policy registered to authenticate the HTTP Request
+         .beanRef("customerService","getCustomerDetail");
+{% endhighlight %}
+
+As you can see this approach is very flexible as you can plug whatever technology you prefer to use to secure the access to the REST service exposed as Endpoint by the Jetty Server.
+
+## Web Container
+
+We can also enrich the architecture and use the features offered by the Jetty/Netty HTTP Server in order to 
+
+- Enable the SSL/TLS Security layer to encrypt the data exchanged between the HTTP Agent and the Server,
+- Setup mutual TLS,
+- To restrict the access to the Web Resources using a **SecurityConstraint** associated with a user's role. 
+
+{% highlight java %}
+// Describe the Authentication Constraint to be applied (BASIC, DIGEST, NEGOTIATE, ...)
+Constraint constraint = new Constraint(Constraint.__BASIC_AUTH, "user");
+constraint.setAuthenticate(true);
+
+// Map the Auth Constraint with a Path
+ConstraintMapping cm = new ConstraintMapping();
+cm.setPathSpec("/*");
+cm.setConstraint(constraint);
+
+HashLoginService loginService = new HashLoginService("MyRealm",
+        "myrealm.props");
+
+ConstraintSecurityHandler sh = new ConstraintSecurityHandler();
+sh.setAuthenticator(new BasicAuthenticator());
+sh.setConstraintMappings(cm);
+sh.setLoginService(loginService);
+{% endhighlight %}
+
+- Authenticate the user using some JAAS Plugin (HashLogin with Property file, LDAP, JDBC)
+
+As you can see within the next diagram, the security architecture proposed is more robust as managed by two distinct levels if you combine the Interceptor pattern with the HTTP Security model :
+
+- The Web HTTP Container will be responsible to Authenticate the user and restrict the access to the Web Resoruces,
+- The Connection between the HTTP agent and the Server is more secured as the data will be encrypted and the confidentiality of the data exchanged will be guarantee
+- The interceptor will become responsible to authorize the access to the Service
+
+![interceptor-jetty]({{ site.url }}/images/security/rest-2.png)
+
+## Pros/Cons of the patterns
+
+| Pros  | Cons  |
+|-------|-------|
+|   No product lock    | Intrusive      |
+| Great Flexibility/Freedem | Low Management Capability |
+| Spec Managed | Lack of Governance |
+
+
+## Gateway
+
+![interceptor-jetty]({{ site.url }}/images/security/rest-3.png)
+
 
 
