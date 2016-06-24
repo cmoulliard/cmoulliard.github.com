@@ -113,7 +113,7 @@ We can also enrich the architecture and use the features offered by the Jetty/Ne
 
 - Enable the SSL/TLS Security layer to encrypt the data exchanged between the HTTP Agent and the Server,
 - Setup mutual TLS,
-- To restrict the access to the Web Resources using a **SecurityConstraint** associated with a user's role. 
+- Restrict the access to the Web Resources using a **SecurityConstraint** associated with a user's role. 
 
 {% highlight java %}
 // Describe the Authentication Constraint to be applied (BASIC, DIGEST, NEGOTIATE, ...)
