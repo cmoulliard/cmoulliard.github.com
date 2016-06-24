@@ -50,7 +50,7 @@ and the credentials provided by the HTTP agent. The principe is presented within
 ![camel-intercept]({{ site.url }}/images/security/interceptor.png)
 
 Within the flow describing how a request or an exchange is processed, an interceptor is added before or after the call to the processor responsible to handle the logic declared within the application. This 
-interceptor wraps your code and will act as a security guardian. This pattern is supported by the Apache Camel Framework and Apache CXF using respectively a [Policy](https://camel.apache.org/maven/camel-2.15.0/camel-core/apidocs/org/apache/camel/spi/Policy.html).
+interceptor wraps your code and will act as a security guardian. This pattern is supported by the Apache Camel Framework using a [Policy](https://camel.apache.org/maven/camel-2.15.0/camel-core/apidocs/org/apache/camel/spi/Policy.html).
 
 The interceptor can use the existing Security Frameworks/Technologies to handle the authentication/authorization process like JAAS, Apache Shiro, Spring Security, Apache WS4J, ...) but you can also create your own Interceptor and plug it within the 
 flow as we will demonstrate hereafter.
