@@ -145,11 +145,11 @@ As you can see within the next diagram, the security architecture proposed is mo
 
 ## Pros/Cons of the patterns
 
-| Pros  | Cons  |
-|-------|-------|
-|   No product lock    | Intrusive      |
-| Great Flexibility/Freedem | Low Management Capability |
-| Spec Managed | Lack of Governance |
+ Pros | Cons  
+ --- | --- 
+ No product lock | Intrusive 
+ Great Flexibility | Low Management Capability 
+ Spec Managed | Lack of Governance 
 
 
 ## Gateway
