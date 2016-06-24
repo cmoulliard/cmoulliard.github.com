@@ -143,14 +143,32 @@ As you can see within the next diagram, the security architecture proposed is mo
 
 ![interceptor-jetty]({{ site.url }}/images/security/rest-2.png)
 
-## Pros/Cons of the patterns
+## Time to mitigate the approach
 
- Pros | Cons  
- --- | --- 
- No product lock | Intrusive 
- Great Flexibility | Low Management Capability 
- Spec Managed | Lack of Governance 
 
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Pros</th>
+            <th>Cons</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>No product lock</td>
+            <td>Intrusive</td>
+        </tr>
+        <tr>
+            <td>Great Flexibility </td>
+            <td>Low Management Capability </td>
+       </tr>
+        <tr>
+            <td>Spec Managed</td>
+            <td>Lack of Governance </td>
+        </tr>
+    </tbody>
+</table>
 
 ## Gateway
 
