@@ -176,3 +176,32 @@ Since the emerging of the *Microservices concept* as design pattern to develop J
 This presentation will introduce *WildFly Swarm* as a *Microservices Java EE Container*,  demonstrate how it fits very well within the Microservices & Dockerized world.  
 
 You will also discover the MicroProfile initiative supported by WildFly Swarm which brings new patterns/concepts for Java EE community like the lightweight container, uber jar, circuit break, health check, service discovery & reactive patterns. The concepts & patterns will be introduced using slides but also demonstrated with simple use case demos.
+
+*****************************************************************************
+
+## WildFly Swarm & Microservices Lab
+
+## Abstract
+
+This lab is focused around Microservices & WildFly Swarm. 
+The use case to be designed is "A REST endpoint which expose a CD Music store Service that we will query from a REST client to fetch the CD or create a new CD. The store is designed as a NoSQL database (Redis, ...). The endpoints will be documented using Swagger. A circuit breaker will be implemented to return a static list of CD if the service operating the datastore is down."
+The Technology to be used is "JAX-RS, CDI, JSON-P, Swagger" with the "Patterns: Service Discovery, Circuit Breaker, Health Check, Load Balancing".
+We will guide you to setup, Implement, develop the solution locally like also to build, package & deploy the solution on Kubernetes. Finally we will review and challenge the solution developed with Q/A.
+
+### Introduction
+* What is a Microservices Architecture
+* Why WildFly Swarm fits very well within this model
+* Review the use case to be designed "A REST endpoint will expose a CD Music store Service that we will query from a REST client to fetch the CD or create a new CD. The store is designed as a NoSQL database (Redis, ...). The endpoints will be documented using Swagger. A circuit breaker will be implemented to return a static list of CD if the service operating the datastore is down.
+* Technology used : JAX-RS, CDI, JSON-P, Swagger
+* Patterns : Service Discovery, Circuit Breaker
+
+### Setup the environment
+* Implementation
+* Design and develop the solution locally
+* Add test case
+* Build, package & deploy the solution on Kubernetes/OpenShift
+
+### Review
+* Discuss and challenge the solution developed
+* Q/A
+* What do you think about the lab/technology used
