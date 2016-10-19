@@ -5,18 +5,18 @@ title: About me
 tags: Fuse Evangelist Integration
 ---
 
-Charles Moulliard is currently a Sr. Principal Solution Architect @RedHat & Apache Committer with more than 20 years of
+*Charles Moulliard* is currently a Sr. Principal Software Engineer @RedHat & Apache Committer with more than 20 years of
 expertise in solutions design based on JEE / Middleware technologies.
 
 As Engineer & Architect, he has been involved in system integration of projects in Financial and Banking world.
 The skills (Methodology, UML, RUP, Project Management, Network, Security, Web Development, Programming languages, RDBMS,
-Architecture - JEE/SOA, Middleware) that he acquires during its career path have help him to address business, functional,
+Architecture - JavaEE, Middleware) that he acquires during its career path have help him to address business, functional,
 security and infrastructure requirements and transpose them into operable and efficient solutions.
 
-He is also fascinated to train people on SOA, OSGI, ESB & JEE and provide consultancy.
+He is also passionated to train people on Microservices, SOA, Middleware & JavaEE.
 
 As an Apache Committer he contributes since several years on opensource projects Apache [Camel](http://camel.apache.org), [Karaf](http://karaf.apache.org), [ServiceMix](http://servicemix.apache.org), [DeltaSpike](http://deltaspike.apache.org), [Fabric8](http://fabric8.io), [Hawtio](http://hawt.io), [Drools](https://github.com/droolsjbpm/), [Asciidoctor](http://asciidoctor.org/) and uses these technologies as standards
-for integration projects. He is a Technology Evangelist making regularly conferences, talks. He lives in Belgium, enjoy mountain bike & Rock'n'roll.
+for integration projects. He is a Technology Evangelist making regularly conferences, talks. He lives in Belgium, enjoy *Mountain bike* & *Rock'n'roll*.
 
 You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cmoulliard), GitHub [https://github.com/cmoulliard](https://github.com/cmoulliard), [Linkedin](http://be.linkedin.com/in/charlesmoulliard/), [SlideShare](http://www.slideshare.net/cmoulliard), [Google+](http://google.com/+CharlesMoulliard) or on his Blog [http://cmoulliard.github.io](http://cmoulliard.github.io).
 
