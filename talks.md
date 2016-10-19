@@ -164,3 +164,15 @@ Cette conférence contient des slides et une démo.
 ## Abstract
 
 The development of a Mobile Aplication has been donimated during a decade by proprietary technologies developed by Apple, Android & Microsoft for their own mobile brand. With the development of the Apache Cordova Platform and the framework Ionic, this situation has completely changed as a developer can now design a project using their favorite HTML5, Javascript, AngularJS frameworks and rely on the tool provided by Apache Codova to generate the HTML Hybrid code for the target platform. The purpose of this talk is to demonstrate how such Mobile project can be designed and being integrated with a Backend System which is a REST Camel microservice. Next, we will also explain how we can simplify the Management and the packaging of the NodeJS application used to access the backend service using the Feedhenry Mobile Application platform and its Api.
+
+*****************************************************************************
+
+## WildFly Swarm, the Microservices JavaEE container
+
+## Abstract
+
+Since the emerging of the *Microservices concept* as design pattern to develop Java Applications, the architect and developer are faced to new challenges to be resolved that the traditional Java EE stack doesn't match very well.
+
+This presentation will introduce *WildFly Swarm* as a *Microservices Java EE Container*,  demonstrate how it fits very well within the Microservices & Dockerized world.  
+
+You will also discover the MicroProfile initiative supported by WildFly Swarm which brings new patterns/concepts for Java EE community like the lightweight container, uber jar, circuit break, health check, service discovery & reactive patterns. The concepts & patterns will be introduced using slides but also demonstrated with simple use case demos.

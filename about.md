@@ -44,6 +44,11 @@ You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cm
 - [Snwocamp 2016 - Grenoble](http://snowcamp.io)
   * [Développer une application mobile connectée à un système backend](http://snowcamp2016.sched.org/event/5meC/developper-une-application-mobile-connectee-a-un-systeme-backend?iframe=yes&w=&sidebar=yes&bg=no#?iframe=yes&w=&sidebar=yes&bg=no)
   * [Design a MicroService application using Apache Camel technology](http://snowcamp2016.sched.org/event/5nBL/design-a-rest-microservice-using-apache-camel-technology?iframe=yes&w=&sidebar=yes&bg=no)
+- [JBCNCONF 2016 - Barcelona](http://www.jbcnconf.com/2016/)
+  * [Security enforcement of Java Application with API Management](http://www.jbcnconf.com/2016/infoSpeaker.html?ref=cmoulliard)
+  * [Develop a Mobile Application connected to a REST Microservice](http://www.jbcnconf.com/2016/infoSpeaker.html?ref=cmoulliard)
+- [Javasi 2016 - Slovenia]()
+  * [WildFly Swarm, the Microservices Java Container](http://www.sioug.si/index.php/srecanje-sioug-2016/urnik-v-ponedeljek-17-10-16)
 
 ## Publications
 
