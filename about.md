@@ -9,8 +9,7 @@ tags: Fuse Evangelist Integration
 expertise in solutions design based on JEE / Middleware technologies.
 
 As Engineer & Architect, he has been involved in system integration of projects in Financial and Banking world.
-The skills (Methodology, UML, RUP, Project Management, Network, Security, Web Development, Programming languages, RDBMS,
-Architecture - JavaEE, Middleware) that he acquires during its career path have help him to address business, functional,
+The skills (Methodology, UML, RUP, Project Management, Network, Security, Web Development, Fluent Api & DSL - JavaEE, Middleware) that he acquires during its career path have help him to address business, functional,
 security and infrastructure requirements and transpose them into operable and efficient solutions.
 
 He is also passionated to train people on Microservices, SOA, Middleware & JavaEE.
