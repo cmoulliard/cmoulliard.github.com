@@ -205,3 +205,28 @@ We will guide you to setup, Implement, develop the solution locally like also to
 * Discuss and challenge the solution developed
 * Q/A
 * What do you think about the lab/technology used
+
+**************************************************************
+## Design a SpringBoot Application running on Kubernetes/OpenShift
+
+## Abstract 
+
+The goal of this workshop is to demonstrate how easy it could be to design/develop a microservice architecture using Spring Boot technology, Kubernetes/OpenShift as Containerized & Management platform.
+
+During the workshop, you will learn how to create a Spring Boot Application composed of 3 microservices (a CD Front Store, the backend exposing and running the service & the Database store), transform it to a Kubernetes/Docker Project using the Fabric8 Technology and deploy/operate it on OpenShift. 
+ 
+With the help of JBoss Forge Tool, you will accelerate the creation of the project and scaffolding of the code
+
+*********************************
+## Accelerate your Spring Boot Development using JBoss Forge Tool
+
+## Abstract
+
+The creation of a Spring Boot project has been greatly simplified using Spring's initialzr. While this initialzr is a great tool to setup a maven project containing the dependencies of the starters you want to use,
+the process to create the project is still web oriented and manual.
+
+The goal of this talk is to introduce you the JBoss Forge Tool project that extends your Java IDE by providing wizards and extensions (add-ons) and how we can use it to create quickly and easily a Spring Boot project,
+initialize it using the dependencies required and scaffold the code required for the starters REST, web & JPA.
+You will also discover how you can script such creation process to make it fun and cool. 
+
+The talk contains a few slides and is demo focused.
