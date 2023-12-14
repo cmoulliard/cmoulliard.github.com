@@ -17,7 +17,7 @@ He is also passionated to train people on Microservice's & reactive development,
 
 He is a Technology Evangelist making regularly conferences, talks. He lives in Belgium, enjoy *Mountain bike* & *Rock'n'roll*.
 
-You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cmoulliard), GitHub [https://github.com/cmoulliard](https://github.com/cmoulliard), [LinkedIn](http://be.linkedin.com/in/charlesmoulliard/), [SlideShare](http://www.slideshare.net/cmoulliard), [Google+](http://google.com/+CharlesMoulliard) or on his Blog [http://cmoulliard.github.io](http://cmoulliard.github.io).
+You can find him online #irc ch007m, Twitter [@cmoulliard](http://twitter.com/cmoulliard), GitHub [https://github.com/cmoulliard](https://github.com/cmoulliard), [LinkedIn](http://be.linkedin.com/in/charlesmoulliard/), [SlideShare](http://www.slideshare.net/cmoulliard), or on his Blog [http://cmoulliard.github.io](http://cmoulliard.github.io).
 
 ## Events
 
